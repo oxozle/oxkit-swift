@@ -18,3 +18,6 @@ public extension Notification.Name {
     }
 }
 
+public let ReachabilityChanged = Notification.Name.init(rawValue: "com.oxozle.reachability.changed")
+
+

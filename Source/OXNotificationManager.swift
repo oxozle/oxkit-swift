@@ -57,7 +57,7 @@ open class OXNotificationManager {
     ///   - block: It is very important to use block as {[weak self] (note: Notification) in
     /// - Returns: object of added observer
     @discardableResult
-    open func registerMTObserver(_ name: Notification.Name, block: @escaping (Notification -> Void)) -> AnyObject {
+    open func registerMTObserver(_ name: Notification.Name, block: @escaping ((_ notification: Notification) -> Void)) -> AnyObject {
         let newToken = NotificationCenter.default.addObserver(forName: name, object: nil, queue: nil) {note in
             Async.main{
                 block(note)
@@ -76,8 +76,8 @@ open class OXNotificationManager {
     ///   - name: notification name
     ///   - block: It is very important to use block as {[weak self] (note: Notification) in
     /// - Returns: object of added observer
-
-    open func registerBTObserver(_ name: Notification.Name, block: @escaping ((Notification!) -> Void)) -> AnyObject {
+    @discardableResult
+    open func registerBTObserver(_ name: Notification.Name, block: @escaping ((_ notification: Notification) -> Void)) -> AnyObject {
         let newToken = NotificationCenter.default.addObserver(forName: name, object: nil, queue: nil) { note in
             
             Async.background {

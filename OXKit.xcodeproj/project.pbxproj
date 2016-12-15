@@ -19,6 +19,8 @@
 		61136C5C1E02E9A6005A3AA6 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61136C551E02E9A6005A3AA6 /* Notification.swift */; };
 		61136C5E1E02E9A6005A3AA6 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61136C571E02E9A6005A3AA6 /* UserDefaults.swift */; };
 		61136C5F1E02E9A6005A3AA6 /* OXUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61136C581E02E9A6005A3AA6 /* OXUtils.swift */; };
+		61136C621E02EB67005A3AA6 /* OXReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61136C601E02EB67005A3AA6 /* OXReachability.swift */; };
+		61136C631E02EB67005A3AA6 /* OXUrlUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61136C611E02EB67005A3AA6 /* OXUrlUtils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		61136C551E02E9A6005A3AA6 /* Notification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Notification.swift; path = Source/Notification.swift; sourceTree = SOURCE_ROOT; };
 		61136C571E02E9A6005A3AA6 /* UserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserDefaults.swift; path = Source/UserDefaults.swift; sourceTree = SOURCE_ROOT; };
 		61136C581E02E9A6005A3AA6 /* OXUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OXUtils.swift; path = Source/OXUtils.swift; sourceTree = SOURCE_ROOT; };
+		61136C601E02EB67005A3AA6 /* OXReachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OXReachability.swift; path = Source/OXReachability.swift; sourceTree = SOURCE_ROOT; };
+		61136C611E02EB67005A3AA6 /* OXUrlUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OXUrlUtils.swift; path = Source/OXUrlUtils.swift; sourceTree = SOURCE_ROOT; };
 		E78892732BE85D18705926F4 /* Pods-OXKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OXKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OXKit/Pods-OXKit.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -117,6 +121,8 @@
 			children = (
 				61136C541E02E9A6005A3AA6 /* OXNotificationManager.swift */,
 				61136C581E02E9A6005A3AA6 /* OXUtils.swift */,
+				61136C601E02EB67005A3AA6 /* OXReachability.swift */,
+				61136C611E02EB67005A3AA6 /* OXUrlUtils.swift */,
 			);
 			name = Core;
 			sourceTree = "<group>";
@@ -251,8 +257,10 @@
 				61136C5C1E02E9A6005A3AA6 /* Notification.swift in Sources */,
 				61136C5E1E02E9A6005A3AA6 /* UserDefaults.swift in Sources */,
 				61136C3A1E02E514005A3AA6 /* CALayer.swift in Sources */,
+				61136C621E02EB67005A3AA6 /* OXReachability.swift in Sources */,
 				61136C5F1E02E9A6005A3AA6 /* OXUtils.swift in Sources */,
 				61136C3E1E02E514005A3AA6 /* UIColor.swift in Sources */,
+				61136C631E02EB67005A3AA6 /* OXUrlUtils.swift in Sources */,
 				61136C401E02E514005A3AA6 /* UIImage.swift in Sources */,
 				61136C5B1E02E9A6005A3AA6 /* OXNotificationManager.swift in Sources */,
 			);

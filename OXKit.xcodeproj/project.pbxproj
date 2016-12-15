@@ -8,15 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		268131049489B160F88B2583 /* Pods_OXKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22F4B830A30F8AA96E95D2C7 /* Pods_OXKit.framework */; };
-		61136C251E02E04E005A3AA6 /* OXKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 61136C231E02E04E005A3AA6 /* OXKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61136C2F1E02E4D5005A3AA6 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 61136C2D1E02E4D5005A3AA6 /* Info.plist */; };
+		61136C3A1E02E514005A3AA6 /* CALayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61136C321E02E514005A3AA6 /* CALayer.swift */; };
+		61136C3C1E02E514005A3AA6 /* CGRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61136C341E02E514005A3AA6 /* CGRect.swift */; };
+		61136C3E1E02E514005A3AA6 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61136C361E02E514005A3AA6 /* UIColor.swift */; };
+		61136C401E02E514005A3AA6 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61136C381E02E514005A3AA6 /* UIImage.swift */; };
+		61136C411E02E514005A3AA6 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61136C391E02E514005A3AA6 /* UIView.swift */; };
+		61136C421E02E594005A3AA6 /* OXKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 61136C2E1E02E4D5005A3AA6 /* OXKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		22F4B830A30F8AA96E95D2C7 /* Pods_OXKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OXKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		413ACBF5489F0508F3FC0296 /* Pods-OXKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OXKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-OXKit/Pods-OXKit.release.xcconfig"; sourceTree = "<group>"; };
 		61136C201E02E04E005A3AA6 /* OXKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OXKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		61136C231E02E04E005A3AA6 /* OXKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OXKit.h; sourceTree = "<group>"; };
-		61136C241E02E04E005A3AA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		61136C2D1E02E4D5005A3AA6 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Source/Info.plist; sourceTree = SOURCE_ROOT; };
+		61136C2E1E02E4D5005A3AA6 /* OXKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OXKit.h; path = Source/OXKit.h; sourceTree = SOURCE_ROOT; };
+		61136C321E02E514005A3AA6 /* CALayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CALayer.swift; path = Source/CALayer.swift; sourceTree = SOURCE_ROOT; };
+		61136C341E02E514005A3AA6 /* CGRect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CGRect.swift; path = Source/CGRect.swift; sourceTree = SOURCE_ROOT; };
+		61136C361E02E514005A3AA6 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIColor.swift; path = Source/UIColor.swift; sourceTree = SOURCE_ROOT; };
+		61136C381E02E514005A3AA6 /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIImage.swift; path = Source/UIImage.swift; sourceTree = SOURCE_ROOT; };
+		61136C391E02E514005A3AA6 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIView.swift; path = Source/UIView.swift; sourceTree = SOURCE_ROOT; };
 		E78892732BE85D18705926F4 /* Pods-OXKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OXKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OXKit/Pods-OXKit.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -44,7 +55,7 @@
 		61136C161E02E04D005A3AA6 = {
 			isa = PBXGroup;
 			children = (
-				61136C221E02E04E005A3AA6 /* OXKit */,
+				61136C221E02E04E005A3AA6 /* Source */,
 				61136C211E02E04E005A3AA6 /* Products */,
 				4E641A7E8F68549AD95A1F50 /* Pods */,
 				814766B83DEB40111EFEF1B1 /* Frameworks */,
@@ -59,13 +70,35 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		61136C221E02E04E005A3AA6 /* OXKit */ = {
+		61136C221E02E04E005A3AA6 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				61136C231E02E04E005A3AA6 /* OXKit.h */,
-				61136C241E02E04E005A3AA6 /* Info.plist */,
+				61136C311E02E501005A3AA6 /* Extensions */,
+				61136C2C1E02E4CC005A3AA6 /* Supporting Files */,
 			);
+			name = Source;
 			path = OXKit;
+			sourceTree = "<group>";
+		};
+		61136C2C1E02E4CC005A3AA6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				61136C2D1E02E4D5005A3AA6 /* Info.plist */,
+				61136C2E1E02E4D5005A3AA6 /* OXKit.h */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		61136C311E02E501005A3AA6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				61136C321E02E514005A3AA6 /* CALayer.swift */,
+				61136C341E02E514005A3AA6 /* CGRect.swift */,
+				61136C361E02E514005A3AA6 /* UIColor.swift */,
+				61136C381E02E514005A3AA6 /* UIImage.swift */,
+				61136C391E02E514005A3AA6 /* UIView.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 		814766B83DEB40111EFEF1B1 /* Frameworks */ = {
@@ -83,7 +116,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				61136C251E02E04E005A3AA6 /* OXKit.h in Headers */,
+				61136C421E02E594005A3AA6 /* OXKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,6 +155,7 @@
 					61136C1F1E02E04E005A3AA6 = {
 						CreatedOnToolsVersion = 8.2;
 						DevelopmentTeam = 2G9G4W9JT5;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -148,6 +182,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61136C2F1E02E4D5005A3AA6 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,6 +226,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61136C411E02E514005A3AA6 /* UIView.swift in Sources */,
+				61136C3C1E02E514005A3AA6 /* CGRect.swift in Sources */,
+				61136C3A1E02E514005A3AA6 /* CALayer.swift in Sources */,
+				61136C3E1E02E514005A3AA6 /* UIColor.swift in Sources */,
+				61136C401E02E514005A3AA6 /* UIImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,18 +340,20 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E78892732BE85D18705926F4 /* Pods-OXKit.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 2G9G4W9JT5;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = OXKit/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.oxozle.oxkit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -320,13 +362,14 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 413ACBF5489F0508F3FC0296 /* Pods-OXKit.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 2G9G4W9JT5;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = OXKit/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.oxozle.oxkit;
@@ -355,6 +398,7 @@
 				61136C2A1E02E04E005A3AA6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

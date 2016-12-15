@@ -15,6 +15,10 @@
 		61136C401E02E514005A3AA6 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61136C381E02E514005A3AA6 /* UIImage.swift */; };
 		61136C411E02E514005A3AA6 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61136C391E02E514005A3AA6 /* UIView.swift */; };
 		61136C421E02E594005A3AA6 /* OXKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 61136C2E1E02E4D5005A3AA6 /* OXKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61136C5B1E02E9A6005A3AA6 /* OXNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61136C541E02E9A6005A3AA6 /* OXNotificationManager.swift */; };
+		61136C5C1E02E9A6005A3AA6 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61136C551E02E9A6005A3AA6 /* Notification.swift */; };
+		61136C5E1E02E9A6005A3AA6 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61136C571E02E9A6005A3AA6 /* UserDefaults.swift */; };
+		61136C5F1E02E9A6005A3AA6 /* OXUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61136C581E02E9A6005A3AA6 /* OXUtils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,10 @@
 		61136C361E02E514005A3AA6 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIColor.swift; path = Source/UIColor.swift; sourceTree = SOURCE_ROOT; };
 		61136C381E02E514005A3AA6 /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIImage.swift; path = Source/UIImage.swift; sourceTree = SOURCE_ROOT; };
 		61136C391E02E514005A3AA6 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIView.swift; path = Source/UIView.swift; sourceTree = SOURCE_ROOT; };
+		61136C541E02E9A6005A3AA6 /* OXNotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OXNotificationManager.swift; path = Source/OXNotificationManager.swift; sourceTree = SOURCE_ROOT; };
+		61136C551E02E9A6005A3AA6 /* Notification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Notification.swift; path = Source/Notification.swift; sourceTree = SOURCE_ROOT; };
+		61136C571E02E9A6005A3AA6 /* UserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserDefaults.swift; path = Source/UserDefaults.swift; sourceTree = SOURCE_ROOT; };
+		61136C581E02E9A6005A3AA6 /* OXUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OXUtils.swift; path = Source/OXUtils.swift; sourceTree = SOURCE_ROOT; };
 		E78892732BE85D18705926F4 /* Pods-OXKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OXKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OXKit/Pods-OXKit.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -73,6 +81,7 @@
 		61136C221E02E04E005A3AA6 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				61136C431E02E97D005A3AA6 /* Core */,
 				61136C311E02E501005A3AA6 /* Extensions */,
 				61136C2C1E02E4CC005A3AA6 /* Supporting Files */,
 			);
@@ -92,6 +101,8 @@
 		61136C311E02E501005A3AA6 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				61136C571E02E9A6005A3AA6 /* UserDefaults.swift */,
+				61136C551E02E9A6005A3AA6 /* Notification.swift */,
 				61136C321E02E514005A3AA6 /* CALayer.swift */,
 				61136C341E02E514005A3AA6 /* CGRect.swift */,
 				61136C361E02E514005A3AA6 /* UIColor.swift */,
@@ -99,6 +110,15 @@
 				61136C391E02E514005A3AA6 /* UIView.swift */,
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		61136C431E02E97D005A3AA6 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				61136C541E02E9A6005A3AA6 /* OXNotificationManager.swift */,
+				61136C581E02E9A6005A3AA6 /* OXUtils.swift */,
+			);
+			name = Core;
 			sourceTree = "<group>";
 		};
 		814766B83DEB40111EFEF1B1 /* Frameworks */ = {
@@ -228,9 +248,13 @@
 			files = (
 				61136C411E02E514005A3AA6 /* UIView.swift in Sources */,
 				61136C3C1E02E514005A3AA6 /* CGRect.swift in Sources */,
+				61136C5C1E02E9A6005A3AA6 /* Notification.swift in Sources */,
+				61136C5E1E02E9A6005A3AA6 /* UserDefaults.swift in Sources */,
 				61136C3A1E02E514005A3AA6 /* CALayer.swift in Sources */,
+				61136C5F1E02E9A6005A3AA6 /* OXUtils.swift in Sources */,
 				61136C3E1E02E514005A3AA6 /* UIColor.swift in Sources */,
 				61136C401E02E514005A3AA6 /* UIImage.swift in Sources */,
+				61136C5B1E02E9A6005A3AA6 /* OXNotificationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

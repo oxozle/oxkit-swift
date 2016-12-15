@@ -1,6 +1,6 @@
 //
 //  UIView.swift
-//  Pods
+//  OXKit
 //
 //  Created by Dmitriy on 25.05.16.
 //

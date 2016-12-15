@@ -1,6 +1,6 @@
 //
 //  UIImage.swift
-//  Pods
+//  OXKit
 //
 //  Created by Dmitriy Azarov on 23/10/2016.
 //

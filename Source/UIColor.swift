@@ -1,6 +1,6 @@
 //
 //  UIColor.swift
-//  Pods
+//  OXKit
 //
 //  Created by Dmitriy Azarov on 10/04/16.
 //

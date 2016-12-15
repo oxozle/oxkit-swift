@@ -1,6 +1,6 @@
 //
 //  CGRect.swift
-//  Pods
+//  OXKit
 //
 //  Created by Dmitriy Azarov on 16/04/16.
 //

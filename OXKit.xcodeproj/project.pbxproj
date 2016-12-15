@@ -7,13 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		268131049489B160F88B2583 /* Pods_OXKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22F4B830A30F8AA96E95D2C7 /* Pods_OXKit.framework */; };
 		61136C251E02E04E005A3AA6 /* OXKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 61136C231E02E04E005A3AA6 /* OXKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		22F4B830A30F8AA96E95D2C7 /* Pods_OXKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OXKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		413ACBF5489F0508F3FC0296 /* Pods-OXKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OXKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-OXKit/Pods-OXKit.release.xcconfig"; sourceTree = "<group>"; };
 		61136C201E02E04E005A3AA6 /* OXKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OXKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		61136C231E02E04E005A3AA6 /* OXKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OXKit.h; sourceTree = "<group>"; };
 		61136C241E02E04E005A3AA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E78892732BE85D18705926F4 /* Pods-OXKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OXKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OXKit/Pods-OXKit.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -21,17 +25,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				268131049489B160F88B2583 /* Pods_OXKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E641A7E8F68549AD95A1F50 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E78892732BE85D18705926F4 /* Pods-OXKit.debug.xcconfig */,
+				413ACBF5489F0508F3FC0296 /* Pods-OXKit.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		61136C161E02E04D005A3AA6 = {
 			isa = PBXGroup;
 			children = (
 				61136C221E02E04E005A3AA6 /* OXKit */,
 				61136C211E02E04E005A3AA6 /* Products */,
+				4E641A7E8F68549AD95A1F50 /* Pods */,
+				814766B83DEB40111EFEF1B1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -52,6 +68,14 @@
 			path = OXKit;
 			sourceTree = "<group>";
 		};
+		814766B83DEB40111EFEF1B1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				22F4B830A30F8AA96E95D2C7 /* Pods_OXKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -70,10 +94,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 61136C281E02E04E005A3AA6 /* Build configuration list for PBXNativeTarget "OXKit" */;
 			buildPhases = (
+				2A045AE14C9423555BA48274 /* [CP] Check Pods Manifest.lock */,
 				61136C1B1E02E04E005A3AA6 /* Sources */,
 				61136C1C1E02E04E005A3AA6 /* Frameworks */,
 				61136C1D1E02E04E005A3AA6 /* Headers */,
 				61136C1E1E02E04E005A3AA6 /* Resources */,
+				B4F25E53CD75796915D7E17B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -126,6 +152,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2A045AE14C9423555BA48274 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B4F25E53CD75796915D7E17B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OXKit/Pods-OXKit-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		61136C1B1E02E04E005A3AA6 /* Sources */ = {
@@ -239,6 +298,7 @@
 		};
 		61136C291E02E04E005A3AA6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E78892732BE85D18705926F4 /* Pods-OXKit.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
@@ -258,6 +318,7 @@
 		};
 		61136C2A1E02E04E005A3AA6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 413ACBF5489F0508F3FC0296 /* Pods-OXKit.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;

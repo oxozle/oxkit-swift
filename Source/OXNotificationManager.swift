@@ -32,23 +32,22 @@ open class OXNotificationManager {
         observerNames = []
     }
     
-    open func unregisterObserverToken(_ token: Any) {
-        NotificationCenter.default.removeObserver(token)
-        
-        for (index, record) in observerTokens.enumerated() {
-            if record.isEqual(token) {
-                observerTokens.remove(at: index)
-            }
-        }
-        for (index, record) in observerNames.enumerated() {
-            if let recordObject = record[0] as? AnyObject {
-                if recordObject.isEqual(token) {
-                    observerNames.remove(at: index)
-                }
-            }
-        }
-    }
-
+//    open func unregisterObserverToken(_ token: Any) {
+//        NotificationCenter.default.removeObserver(token)
+//        
+//        for (index, record) in observerTokens.enumerated() {
+//            if record.isEqual(token) {
+//                observerTokens.remove(at: index)
+//            }
+//        }
+//        for (index, record) in observerNames.enumerated() {
+//            let recordObject = record[0]
+//            if recordObject.isEqual(token) {
+//                observerNames.remove(at: index)
+//            }
+//        }
+//    }
+    
     
     /// Register main thread observer
     ///

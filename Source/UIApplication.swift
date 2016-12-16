@@ -17,6 +17,7 @@ import UIKit
 public enum ChangeRootViewControllerAnimation {
     case none
     case transitionCrossDissolve
+    case transitionFlipFromRight
     case scale
 }
 
@@ -27,6 +28,16 @@ extension UIApplication {
             switch animation {
             case .none:
                 window.rootViewController = rootViewController
+            case .transitionFlipFromRight:
+                UIView.transition(with: window, duration: 0.5, options: .transitionFlipFromRight, animations: {
+                    let oldState: Bool = UIView.areAnimationsEnabled
+                    UIView.setAnimationsEnabled(false)
+                    window.rootViewController = rootViewController
+                    UIView.setAnimationsEnabled(oldState)
+                }, completion: { (finished: Bool) -> () in
+                    completion?()
+                })
+
             case .transitionCrossDissolve:
                 UIView.transition(with: window, duration: 0.5, options: .transitionCrossDissolve, animations: {
                     let oldState: Bool = UIView.areAnimationsEnabled

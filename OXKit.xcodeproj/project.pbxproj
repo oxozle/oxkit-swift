@@ -27,6 +27,7 @@
 		61136C721E03E226005A3AA6 /* OXViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61136C6E1E03E226005A3AA6 /* OXViewController.swift */; };
 		61136C761E03E463005A3AA6 /* OXButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61136C731E03E463005A3AA6 /* OXButton.swift */; };
 		61136C771E03E463005A3AA6 /* OXGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61136C741E03E463005A3AA6 /* OXGradientView.swift */; };
+		61136C7B1E03E81A005A3AA6 /* OXView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61136C7A1E03E81A005A3AA6 /* OXView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		61136C6E1E03E226005A3AA6 /* OXViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OXViewController.swift; path = Source/OXViewController.swift; sourceTree = SOURCE_ROOT; };
 		61136C731E03E463005A3AA6 /* OXButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OXButton.swift; path = Source/OXButton.swift; sourceTree = SOURCE_ROOT; };
 		61136C741E03E463005A3AA6 /* OXGradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OXGradientView.swift; path = Source/OXGradientView.swift; sourceTree = SOURCE_ROOT; };
+		61136C7A1E03E81A005A3AA6 /* OXView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OXView.swift; path = Source/OXView.swift; sourceTree = SOURCE_ROOT; };
 		E78892732BE85D18705926F4 /* Pods-OXKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OXKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OXKit/Pods-OXKit.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -148,6 +150,7 @@
 				61136C6C1E03E226005A3AA6 /* OXNavigationBar.swift */,
 				61136C6D1E03E226005A3AA6 /* OXNavigationController.swift */,
 				61136C6E1E03E226005A3AA6 /* OXViewController.swift */,
+				61136C7A1E03E81A005A3AA6 /* OXView.swift */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 				61136C5E1E02E9A6005A3AA6 /* UserDefaults.swift in Sources */,
 				61136C3A1E02E514005A3AA6 /* CALayer.swift in Sources */,
 				61136C621E02EB67005A3AA6 /* OXReachability.swift in Sources */,
+				61136C7B1E03E81A005A3AA6 /* OXView.swift in Sources */,
 				61136C5F1E02E9A6005A3AA6 /* OXUtils.swift in Sources */,
 				61136C3E1E02E514005A3AA6 /* UIColor.swift in Sources */,
 				61136C721E03E226005A3AA6 /* OXViewController.swift in Sources */,

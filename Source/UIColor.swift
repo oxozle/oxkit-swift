@@ -11,6 +11,21 @@ import UIKit
 extension UIColor {
     
     
+    /// Return new brighter color with brightness modification in HSB color space
+    ///
+    /// - Parameter brightMultiplier: 1.4 is good =)
+    public func lighterColor(brightMultiplier: CGFloat)  -> UIColor {
+        var h: CGFloat = 0
+        var s: CGFloat = 0
+        var b: CGFloat = 0
+        var a: CGFloat = 0
+        
+        self.getHue(&h, saturation: &s, brightness: &b, alpha: &a)
+        b *= brightMultiplier
+        return UIColor(hue: h, saturation: s, brightness: b, alpha: a)
+    }
+    
+    
     /// Return Hex value of color. For white color return "FFFFFF" without '#' symbol
     public var hex: String{
         var r:CGFloat = 0

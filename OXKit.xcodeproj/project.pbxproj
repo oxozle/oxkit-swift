@@ -29,6 +29,7 @@
 		61136C771E03E463005A3AA6 /* OXGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61136C741E03E463005A3AA6 /* OXGradientView.swift */; };
 		61136C7B1E03E81A005A3AA6 /* OXView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61136C7A1E03E81A005A3AA6 /* OXView.swift */; };
 		61136C7D1E03EA5A005A3AA6 /* CGPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61136C7C1E03EA5A005A3AA6 /* CGPoint.swift */; };
+		61136C7F1E03ECB1005A3AA6 /* UIImageEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61136C7E1E03ECB1005A3AA6 /* UIImageEffects.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		61136C741E03E463005A3AA6 /* OXGradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OXGradientView.swift; path = Source/OXGradientView.swift; sourceTree = SOURCE_ROOT; };
 		61136C7A1E03E81A005A3AA6 /* OXView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OXView.swift; path = Source/OXView.swift; sourceTree = SOURCE_ROOT; };
 		61136C7C1E03EA5A005A3AA6 /* CGPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CGPoint.swift; path = Source/CGPoint.swift; sourceTree = SOURCE_ROOT; };
+		61136C7E1E03ECB1005A3AA6 /* UIImageEffects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIImageEffects.swift; path = Source/UIImageEffects.swift; sourceTree = SOURCE_ROOT; };
 		E78892732BE85D18705926F4 /* Pods-OXKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OXKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OXKit/Pods-OXKit.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -154,6 +156,7 @@
 				61136C6D1E03E226005A3AA6 /* OXNavigationController.swift */,
 				61136C6E1E03E226005A3AA6 /* OXViewController.swift */,
 				61136C7A1E03E81A005A3AA6 /* OXView.swift */,
+				61136C7E1E03ECB1005A3AA6 /* UIImageEffects.swift */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61136C7F1E03ECB1005A3AA6 /* UIImageEffects.swift in Sources */,
 				61136C701E03E226005A3AA6 /* OXNavigationBar.swift in Sources */,
 				61136C661E03DF9F005A3AA6 /* UIApplication.swift in Sources */,
 				61136C711E03E226005A3AA6 /* OXNavigationController.swift in Sources */,

@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-public class OXView: UIView {
+open class OXView: UIView {
     public class func loadFromNib(_ data: Any? = nil) -> OXView {
         let view = UINib(nibName: "\(self)", bundle: Bundle.main).instantiate(withOwner: self, options: nil).first as! OXView
         view.setupData(data)
@@ -18,11 +18,11 @@ public class OXView: UIView {
     }
     
     
-    public func configureView() {
+    open func configureView() {
         
     }
     
-    public func setupData(_ data: Any? = nil) {
+    open func setupData(_ data: Any? = nil) {
         
     }
 }

@@ -9,15 +9,25 @@
 import UIKit
 
 ///Base class for safe use view controllers
-public class OXViewController: UIViewController {
+open class OXViewController: UIViewController {
     
-    open var notificationManager: OXNotificationManager = OXNotificationManager()
+    public var notificationManager: OXNotificationManager = OXNotificationManager()
+    
+    open  class func showController(_ parent: OXViewController, data: [String:Any]? = nil) {
+        if let controller = getController(data) {
+            parent.navigationController?.pushViewController(controller, animated: true)
+        }
+    }
+    
+    open func controllerClose() {
+        navigationController?.popViewController(animated: true)
+    }
     
     
     /// Init controller with data. Should return false if data is incorrect or controller could not be initialized
     ///
     /// - Parameter data: dictionary with data
-    public func initController(_ data: [String:Any]?) -> Bool {
+    open func initController(_ data: [String:Any]?) -> Bool {
         return true
     }
     
@@ -28,7 +38,7 @@ public class OXViewController: UIViewController {
         notificationManager.deregisterAll()
     }
     
-    public override func viewDidLoad() {
+    open override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.plain, target:nil, action:nil)
     }
@@ -36,8 +46,8 @@ public class OXViewController: UIViewController {
     
     //MARK: Public
     
-    public class var storyboardName: String { return "" }
-    public class var controllerIdentifier: String {  return "" }
+    open class var storyboardName: String { return "" }
+    open class var controllerIdentifier: String {  return "" }
     
     public class func getController(_ data: [String:Any]? = nil) -> OXViewController? {
         let controller = getViewController()

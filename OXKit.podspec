@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "OXKit"
-  s.version      = "0.4.1"
+  s.version      = "0.4.2"
   s.summary      = "Kit for iOS Swift"
   s.homepage     = "http://oxozle.com"
   s.license      = "MIT"

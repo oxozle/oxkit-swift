@@ -23,7 +23,7 @@ OXKit is a set of utilities to make working with swift better.
 $ gem install cocoapods
 ```
 
-To integrate OXkit into your Xcode project using CocoaPods, specify it in your `Podfile`:
+To integrate OXKit into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
 ```ruby
 source 'https://github.com/CocoaPods/Specs.git'
@@ -49,7 +49,7 @@ $ pod install
 
 ### View Controller
 
-Create view controller base on `OXViewController`
+Offen you have to create UIStoryboard and get controller from it. To safe create view controller user ViewController based on `OXViewController`. Place your view controller in `Master` storyboard.
 
 ```swift
 class MenuViewController: OXViewController {
@@ -62,3 +62,37 @@ Create controller instance
 ```swift
 let sidebarViewController = MenuViewController.getController()
 ```
+
+Or create controller with custom data passed to it
+```swift
+let sidebarViewController = MenuViewController.getController(["selectedItem": MenuItems.Profile.rawValue])
+```
+
+
+### Notification Center
+
+Create `OXNotificationManager`. Subscribe for notifications in Main thread or Background thread easy. Use can easy post notification with Notification.Name extension.
+
+```swift
+let notificationManager: OXNotificationManager = OXNotificationManager()
+
+notificationManager.registerMTObserver(Notification.Name.TestNotification) { [weak self] notification in 
+	print("Notification in main thread")
+}
+
+notificationManager.registerMTObserver(Notification.Name.TestNotificationBackground) { [weak self] notification in 
+	print("Notification in background thread")
+}
+
+Notification.Name.TestNotification.post()
+```
+
+
+
+
+
+## <a name="license">License</a>
+
+OXKit is available under [the MIT license][license].
+
+[license]:      https://github.com/oxozle/oxkit-swift/blob/master/LICENSE

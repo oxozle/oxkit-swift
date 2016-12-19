@@ -8,7 +8,6 @@
 
 import Foundation
 import UIKit
-import Async
 
 public extension UIImage {
     
@@ -93,7 +92,7 @@ public extension UIImage {
     /// - Parameters:
     ///   - radius: gaussian blur radius
     public func applyGaussianBlurEffect(radius: CGFloat, callback: @escaping (_ blurredImage: UIImage?) -> Void){
-        Async.background {
+        DispatchQueue.global(qos: DispatchQoS.QoSClass.utility).async {
             let imageToBlur = CIImage(image: self)
             guard let blurfilter = CIFilter(name: "CIGaussianBlur") else { callback(nil); return}
             blurfilter.setValue(imageToBlur, forKey: kCIInputImageKey)

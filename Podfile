@@ -4,7 +4,6 @@ use_frameworks!
 target 'OXKit' do
     pod 'Alamofire', '~> 4.0'
     pod 'SwiftyJSON'
-    pod 'AsyncSwift'
 end
 
 #post_install do |installer|

@@ -7,13 +7,14 @@
 //
 
 import Foundation
-import Async
 
-
-///http://moreindirection.blogspot.ru/2014/08/nsnotificationcenter-swift-and-blocks.html
 open class OXNotificationManager {
-    fileprivate var observerTokens: [AnyObject] = []
-    fileprivate var observerNames: [[Any]] = []
+    fileprivate var observerTokens: [NotificationTokenWithName] = []
+    
+    struct NotificationTokenWithName {
+        var token: NSObjectProtocol
+        var name: Notification.Name
+    }
     
     public init() {
         
@@ -25,29 +26,22 @@ open class OXNotificationManager {
     
     open func deregisterAll() {
         for token in observerTokens {
-            NotificationCenter.default.removeObserver(token)
+            NotificationCenter.default.removeObserver(token.token)
         }
         
-        observerTokens = []
-        observerNames = []
+        observerTokens.removeAll(keepingCapacity: false)
     }
     
-//    open func unregisterObserverToken(_ token: Any) {
-//        NotificationCenter.default.removeObserver(token)
-//        
-//        for (index, record) in observerTokens.enumerated() {
-//            if record.isEqual(token) {
-//                observerTokens.remove(at: index)
-//            }
-//        }
-//        for (index, record) in observerNames.enumerated() {
-//            let recordObject = record[0]
-//            if recordObject.isEqual(token) {
-//                observerNames.remove(at: index)
-//            }
-//        }
-//    }
     
+    /// Unregister objserver by Notification.Name
+    ///
+    /// - Parameter name: Notification.Name
+    open func unregisterObserver(name: Notification.Name) {
+        if let index = observerTokens.index(where: { $0.name.rawValue == name.rawValue }) {
+            NotificationCenter.default.removeObserver(observerTokens[index])
+            observerTokens.remove(at: index)
+        }
+    }
     
     /// Register main thread observer
     ///
@@ -56,16 +50,14 @@ open class OXNotificationManager {
     ///   - block: It is very important to use block as {[weak self] (note: Notification) in
     /// - Returns: object of added observer
     @discardableResult
-    open func registerMTObserver(_ name: Notification.Name, block: @escaping ((_ notification: Notification) -> Void)) -> AnyObject {
+    open func registerMTObserver(_ name: Notification.Name, block: @escaping ((_ notification: Notification) -> Void)) -> NSObjectProtocol {
         let newToken = NotificationCenter.default.addObserver(forName: name, object: nil, queue: nil) {note in
-            Async.main{
+            DispatchQueue.main.async {
                 block(note)
             }
         }
         
-        observerTokens.append(newToken)
-        observerNames.append([newToken, name])
-        
+        observerTokens.append(NotificationTokenWithName(token: newToken, name: name))
         return newToken
     }
     
@@ -76,17 +68,14 @@ open class OXNotificationManager {
     ///   - block: It is very important to use block as {[weak self] (note: Notification) in
     /// - Returns: object of added observer
     @discardableResult
-    open func registerBTObserver(_ name: Notification.Name, block: @escaping ((_ notification: Notification) -> Void)) -> AnyObject {
+    open func registerBTObserver(_ name: Notification.Name, block: @escaping ((_ notification: Notification) -> Void)) -> NSObjectProtocol {
         let newToken = NotificationCenter.default.addObserver(forName: name, object: nil, queue: nil) { note in
-            
-            Async.background {
+            DispatchQueue.global(qos: DispatchQoS.QoSClass.background).async {
                 block(note)
             }
         }
         
-        observerTokens.append(newToken)
-        observerNames.append([newToken, name])
-        
+        observerTokens.append(NotificationTokenWithName(token: newToken, name: name))
         return newToken
     }
 }

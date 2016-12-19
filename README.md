@@ -4,9 +4,8 @@
 [![License](https://img.shields.io/cocoapods/l/OXKit.svg?style=flat)](https://cocoapods.org/pods/OXKit)
 [![Platform](https://img.shields.io/cocoapods/p/OXKit.svg?style=flat)](http://cocoapods.org/pods/OXKit)
 [![Language](https://img.shields.io/badge/swift-3.0-orange.svg)](http://swift.org)
- 
-OXKit is a set of utilities to make working with swift better.
 
+OXKit is a set of utilities to make working with swift better.
 
 ## Requirements
 
@@ -33,10 +32,10 @@ use_frameworks!
 
 target '<Your Target Name>' do
 	# for stable release
-    pod 'OXKit' 
-    
+    pod 'OXKit'
+
     # for latest release
-    pod 'OXKit', :git => 'https://github.com/oxozle/oxkit-swift.git', :branch => 'master' 
+    pod 'OXKit', :git => 'https://github.com/oxozle/oxkit-swift.git', :branch => 'master'
 end
 ```
 

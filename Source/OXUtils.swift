@@ -23,7 +23,7 @@ public final class OXUtils {
     
     /// Return current app version with build 1.0 (25)
     public class var appVersionAndBuild: String {
-        return "\(OXUtils.getVersion()) (\(OXUtils.getBuild()))"
+        return "\(OXUtils.appVersion) (\(OXUtils.appBuild))"
     }
     
     /// Return current version

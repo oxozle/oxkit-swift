@@ -14,7 +14,7 @@ open class OXNavigationBar: UINavigationBar {
         super.init(coder: aDecoder)
     }
     
-    open override init(frame: CGRect) {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
         barStyle = UIBarStyle.black
         shadowImage = UIImage()

@@ -9,11 +9,9 @@
 /* Begin PBXBuildFile section */
 		268131049489B160F88B2583 /* Pods_OXKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22F4B830A30F8AA96E95D2C7 /* Pods_OXKit.framework */; };
 		61136C2F1E02E4D5005A3AA6 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 61136C2D1E02E4D5005A3AA6 /* Info.plist */; };
-		61136C3A1E02E514005A3AA6 /* CALayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61136C321E02E514005A3AA6 /* CALayer.swift */; };
 		61136C3C1E02E514005A3AA6 /* CGRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61136C341E02E514005A3AA6 /* CGRect.swift */; };
 		61136C3E1E02E514005A3AA6 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61136C361E02E514005A3AA6 /* UIColor.swift */; };
 		61136C401E02E514005A3AA6 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61136C381E02E514005A3AA6 /* UIImage.swift */; };
-		61136C411E02E514005A3AA6 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61136C391E02E514005A3AA6 /* UIView.swift */; };
 		61136C421E02E594005A3AA6 /* OXKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 61136C2E1E02E4D5005A3AA6 /* OXKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		61136C5B1E02E9A6005A3AA6 /* OXNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61136C541E02E9A6005A3AA6 /* OXNotificationManager.swift */; };
 		61136C5C1E02E9A6005A3AA6 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61136C551E02E9A6005A3AA6 /* Notification.swift */; };
@@ -29,7 +27,6 @@
 		61136C771E03E463005A3AA6 /* OXGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61136C741E03E463005A3AA6 /* OXGradientView.swift */; };
 		61136C7B1E03E81A005A3AA6 /* OXView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61136C7A1E03E81A005A3AA6 /* OXView.swift */; };
 		61136C7D1E03EA5A005A3AA6 /* CGPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61136C7C1E03EA5A005A3AA6 /* CGPoint.swift */; };
-		61136C7F1E03ECB1005A3AA6 /* UIImageEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61136C7E1E03ECB1005A3AA6 /* UIImageEffects.swift */; };
 		61136CBC1E0433C2005A3AA6 /* UIAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61136CBB1E0433C2005A3AA6 /* UIAlertController.swift */; };
 /* End PBXBuildFile section */
 
@@ -39,11 +36,9 @@
 		61136C201E02E04E005A3AA6 /* OXKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OXKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		61136C2D1E02E4D5005A3AA6 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Source/Info.plist; sourceTree = SOURCE_ROOT; };
 		61136C2E1E02E4D5005A3AA6 /* OXKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OXKit.h; path = Source/OXKit.h; sourceTree = SOURCE_ROOT; };
-		61136C321E02E514005A3AA6 /* CALayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CALayer.swift; path = Source/CALayer.swift; sourceTree = SOURCE_ROOT; };
 		61136C341E02E514005A3AA6 /* CGRect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CGRect.swift; path = Source/CGRect.swift; sourceTree = SOURCE_ROOT; };
 		61136C361E02E514005A3AA6 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIColor.swift; path = Source/UIColor.swift; sourceTree = SOURCE_ROOT; };
 		61136C381E02E514005A3AA6 /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIImage.swift; path = Source/UIImage.swift; sourceTree = SOURCE_ROOT; };
-		61136C391E02E514005A3AA6 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIView.swift; path = Source/UIView.swift; sourceTree = SOURCE_ROOT; };
 		61136C541E02E9A6005A3AA6 /* OXNotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OXNotificationManager.swift; path = Source/OXNotificationManager.swift; sourceTree = SOURCE_ROOT; };
 		61136C551E02E9A6005A3AA6 /* Notification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Notification.swift; path = Source/Notification.swift; sourceTree = SOURCE_ROOT; };
 		61136C571E02E9A6005A3AA6 /* UserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserDefaults.swift; path = Source/UserDefaults.swift; sourceTree = SOURCE_ROOT; };
@@ -58,7 +53,6 @@
 		61136C741E03E463005A3AA6 /* OXGradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OXGradientView.swift; path = Source/OXGradientView.swift; sourceTree = SOURCE_ROOT; };
 		61136C7A1E03E81A005A3AA6 /* OXView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OXView.swift; path = Source/OXView.swift; sourceTree = SOURCE_ROOT; };
 		61136C7C1E03EA5A005A3AA6 /* CGPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CGPoint.swift; path = Source/CGPoint.swift; sourceTree = SOURCE_ROOT; };
-		61136C7E1E03ECB1005A3AA6 /* UIImageEffects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIImageEffects.swift; path = Source/UIImageEffects.swift; sourceTree = SOURCE_ROOT; };
 		61136CBB1E0433C2005A3AA6 /* UIAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIAlertController.swift; path = Source/UIAlertController.swift; sourceTree = SOURCE_ROOT; };
 		E78892732BE85D18705926F4 /* Pods-OXKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OXKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OXKit/Pods-OXKit.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -130,11 +124,9 @@
 				61136C651E03DF9F005A3AA6 /* UIApplication.swift */,
 				61136C571E02E9A6005A3AA6 /* UserDefaults.swift */,
 				61136C551E02E9A6005A3AA6 /* Notification.swift */,
-				61136C321E02E514005A3AA6 /* CALayer.swift */,
 				61136C341E02E514005A3AA6 /* CGRect.swift */,
 				61136C361E02E514005A3AA6 /* UIColor.swift */,
 				61136C381E02E514005A3AA6 /* UIImage.swift */,
-				61136C391E02E514005A3AA6 /* UIView.swift */,
 				61136C7C1E03EA5A005A3AA6 /* CGPoint.swift */,
 				61136CBB1E0433C2005A3AA6 /* UIAlertController.swift */,
 			);
@@ -159,7 +151,6 @@
 				61136C6D1E03E226005A3AA6 /* OXNavigationController.swift */,
 				61136C6E1E03E226005A3AA6 /* OXViewController.swift */,
 				61136C7A1E03E81A005A3AA6 /* OXView.swift */,
-				61136C7E1E03ECB1005A3AA6 /* UIImageEffects.swift */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -298,16 +289,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				61136C7F1E03ECB1005A3AA6 /* UIImageEffects.swift in Sources */,
 				61136C701E03E226005A3AA6 /* OXNavigationBar.swift in Sources */,
 				61136C661E03DF9F005A3AA6 /* UIApplication.swift in Sources */,
 				61136C711E03E226005A3AA6 /* OXNavigationController.swift in Sources */,
-				61136C411E02E514005A3AA6 /* UIView.swift in Sources */,
 				61136C3C1E02E514005A3AA6 /* CGRect.swift in Sources */,
 				61136C5C1E02E9A6005A3AA6 /* Notification.swift in Sources */,
 				61136C5E1E02E9A6005A3AA6 /* UserDefaults.swift in Sources */,
 				61136C7D1E03EA5A005A3AA6 /* CGPoint.swift in Sources */,
-				61136C3A1E02E514005A3AA6 /* CALayer.swift in Sources */,
 				61136CBC1E0433C2005A3AA6 /* UIAlertController.swift in Sources */,
 				61136C621E02EB67005A3AA6 /* OXReachability.swift in Sources */,
 				61136C7B1E03E81A005A3AA6 /* OXView.swift in Sources */,

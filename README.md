@@ -1,4 +1,4 @@
-# OXKIt
+# OXKit
 
 [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/OXKit.svg)](https://img.shields.io/cocoapods/v/OXKit.svg)
 [![License](https://img.shields.io/cocoapods/l/OXKit.svg?style=flat)](https://cocoapods.org/pods/OXKit)

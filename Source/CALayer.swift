@@ -108,5 +108,4 @@ extension CALayer {
         let y = CGFloat((value(forKeyPath: "transform.translation.y") as? NSNumber)?.floatValue ?? 0)
         return CGPoint(x: x, y: y)
     }
-    
 }

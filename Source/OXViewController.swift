@@ -9,8 +9,7 @@
 import UIKit
 
 ///Base class for safe use view controllers
-open class OXViewController: UIViewController {
-    
+open class OXViewController: UIViewController {    
     public var notificationManager: OXNotificationManager = OXNotificationManager()
     
     open  class func showController(_ parent: OXViewController, data: [String:Any]? = nil) {

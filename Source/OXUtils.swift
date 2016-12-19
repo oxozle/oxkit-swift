@@ -19,21 +19,9 @@ public final class OXUtils {
             return UIDevice.current.userInterfaceIdiom == .pad
         }
     }
+   
     
-    
-    /// Return identifierForVendor. For simulator return "4a8aec61-7b8d-4151-a12d-781903cedc67".
-    /// Can return N/A if there is no identifierForVendor
-    ///
-    /// - Returns: <#return value description#>
-    public class func getAdvId() -> String {
-        #if (arch(i386) || arch(x86_64)) && (os(iOS) || os(watchOS) || os(tvOS))
-            return "4a8aec61-7b8d-4151-a12d-781903cedc67"
-        #else
-            return UIDevice.current.identifierForVendor?.uuidString ?? "N/A"
-        #endif
-    }
-    
-    
+    /// Return current app version with build 1.0 (25)
     public class var appVersionAndBuild: String {
         return "\(OXUtils.getVersion()) (\(OXUtils.getBuild()))"
     }
@@ -41,7 +29,7 @@ public final class OXUtils {
     /// Return current version
     ///
     /// - Returns: 1.0
-    public class func getVersion() -> String {
+    public class var appVersion: String {
         let version = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as! String
         return version
     }
@@ -49,7 +37,7 @@ public final class OXUtils {
     /// Return current build
     ///
     /// - Returns: 25
-    public class func getBuild() -> String {
+    public class var appBuild: String {
         return Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") as! String
     }
 

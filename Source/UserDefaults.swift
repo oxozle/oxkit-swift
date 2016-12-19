@@ -25,8 +25,6 @@
 //  SOFTWARE.
 
 import Foundation
-import SwiftyJSON
-
 
 public extension UserDefaults {
     open func bool(forKey defaultName: String, defaultValue: Bool) -> Bool {

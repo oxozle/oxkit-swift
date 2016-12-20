@@ -76,20 +76,16 @@ Create `OXNotificationManager`. Subscribe for notifications in Main thread or Ba
 ```swift
 let notificationManager: OXNotificationManager = OXNotificationManager()
 
-notificationManager.registerMTObserver(Notification.Name.TestNotification) { [weak self] notification in 
+notificationManager.registerMTObserver(Notification.Name.TestNotification) { [weak self] notification in
 	print("Notification in main thread")
 }
 
-notificationManager.registerMTObserver(Notification.Name.TestNotificationBackground) { [weak self] notification in 
+notificationManager.registerMTObserver(Notification.Name.TestNotificationBackground) { [weak self] notification in
 	print("Notification in background thread")
 }
 
 Notification.Name.TestNotification.post()
 ```
-
-
-
-
 
 ## <a name="license">License</a>
 

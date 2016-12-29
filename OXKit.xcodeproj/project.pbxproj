@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		268131049489B160F88B2583 /* Pods_OXKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22F4B830A30F8AA96E95D2C7 /* Pods_OXKit.framework */; };
+		610D8D261E1559D100A3367F /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610D8D251E1559D100A3367F /* Random.swift */; };
 		61136C2F1E02E4D5005A3AA6 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 61136C2D1E02E4D5005A3AA6 /* Info.plist */; };
 		61136C3C1E02E514005A3AA6 /* CGRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61136C341E02E514005A3AA6 /* CGRect.swift */; };
 		61136C3E1E02E514005A3AA6 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61136C361E02E514005A3AA6 /* UIColor.swift */; };
@@ -34,6 +35,7 @@
 /* Begin PBXFileReference section */
 		22F4B830A30F8AA96E95D2C7 /* Pods_OXKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OXKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		413ACBF5489F0508F3FC0296 /* Pods-OXKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OXKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-OXKit/Pods-OXKit.release.xcconfig"; sourceTree = "<group>"; };
+		610D8D251E1559D100A3367F /* Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Random.swift; path = Source/Random.swift; sourceTree = SOURCE_ROOT; };
 		61136C201E02E04E005A3AA6 /* OXKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OXKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		61136C2D1E02E4D5005A3AA6 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Source/Info.plist; sourceTree = SOURCE_ROOT; };
 		61136C2E1E02E4D5005A3AA6 /* OXKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OXKit.h; path = Source/OXKit.h; sourceTree = SOURCE_ROOT; };
@@ -143,6 +145,7 @@
 				61136C581E02E9A6005A3AA6 /* OXUtils.swift */,
 				61136C601E02EB67005A3AA6 /* OXReachability.swift */,
 				61136C611E02EB67005A3AA6 /* OXUrlUtils.swift */,
+				610D8D251E1559D100A3367F /* Random.swift */,
 			);
 			name = Core;
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 				61136C621E02EB67005A3AA6 /* OXReachability.swift in Sources */,
 				61136C7B1E03E81A005A3AA6 /* OXView.swift in Sources */,
 				61136C5F1E02E9A6005A3AA6 /* OXUtils.swift in Sources */,
+				610D8D261E1559D100A3367F /* Random.swift in Sources */,
 				61136C3E1E02E514005A3AA6 /* UIColor.swift in Sources */,
 				61136C721E03E226005A3AA6 /* OXViewController.swift in Sources */,
 				61136C761E03E463005A3AA6 /* OXButton.swift in Sources */,

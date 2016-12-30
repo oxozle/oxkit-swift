@@ -27,7 +27,7 @@
 import UIKit
 
 @IBDesignable
-open class OXButton: UIButton {
+open class OXButton: OXLocalizableButton {
     
     //MARK: - IB Inspectable
     @IBInspectable

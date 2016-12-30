@@ -42,7 +42,7 @@ public extension UIImage {
         UIGraphicsEndImageContext()
         
         guard let cgImage = image?.cgImage else { return nil }
-        self.init(cgImage: cgImage)
+        self.init(cgImage: cgImage, scale: UIScreen.main.scale, orientation: .up)
     }
     
     ///Create UIImage with solid color
@@ -55,7 +55,7 @@ public extension UIImage {
         UIGraphicsEndImageContext()
         
         guard let cgImage = image?.cgImage else { return nil }
-        self.init(cgImage: cgImage)
+        self.init(cgImage: cgImage, scale: UIScreen.main.scale, orientation: .up)
     }
     
     public func addImagePadding(x: CGFloat, y: CGFloat) -> UIImage {

@@ -47,6 +47,12 @@ open class OXLocalizableLabel: UILabel {
     }
 }
 
+extension UIButton {
+    public func setLocalizableTitle(key: String) {
+        setTitle(key.localized(), for: .normal)
+    }
+}
+
 @IBDesignable
 open class OXLocalizableButton: UIButton {
     

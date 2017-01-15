@@ -16,6 +16,13 @@ public func rand(_ range: Range<Int>) -> Int {
     return Int(arc4random_uniform(UInt32(max - min))) + min
 }
 
+// accepts Rand(1 ... 5)
+public func rand(_ range: ClosedRange<Int>) -> Int {
+    let min = range.lowerBound
+    let max = range.upperBound
+    return Int(arc4random_uniform(UInt32(max - min))) + min
+}
+
 public func rand(_ range: Range<CGFloat>) -> CGFloat {
     let min = range.lowerBound
     let max = range.upperBound

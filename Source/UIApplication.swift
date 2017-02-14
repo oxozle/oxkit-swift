@@ -40,6 +40,25 @@ public enum ChangeRootViewControllerAnimation {
 }
 
 extension UIApplication {
+    
+    /// Return the specific topViewController in application
+    public class func topViewController(_ viewController: UIViewController? = UIApplication.shared.keyWindow?.rootViewController) -> UIViewController? {
+        if let nav = viewController as? UINavigationController {
+            return topViewController(nav.visibleViewController)
+        }
+        if let tab = viewController as? UITabBarController {
+            if let selected = tab.selectedViewController {
+                return topViewController(selected)
+            }
+        }
+        if let presented = viewController?.presentedViewController {
+            return topViewController(presented)
+        }
+        return viewController
+    }
+
+    
+    
     public func switchRootViewController(_ window: UIWindow?, rootViewController: UIViewController, animation: ChangeRootViewControllerAnimation, completion: (() -> Void)?) {
         if let window = window {
             
@@ -47,7 +66,7 @@ extension UIApplication {
             case .none:
                 window.rootViewController = rootViewController
             case .transitionFlipFromRight:
-                UIView.transition(with: window, duration: 0.5, options: .transitionFlipFromRight, animations: {
+                UIView.transition(with: window, duration: 0.4, options: .transitionFlipFromRight, animations: {
                     let oldState: Bool = UIView.areAnimationsEnabled
                     UIView.setAnimationsEnabled(false)
                     window.rootViewController = rootViewController
@@ -57,7 +76,7 @@ extension UIApplication {
                 })
 
             case .transitionCrossDissolve:
-                UIView.transition(with: window, duration: 0.5, options: .transitionCrossDissolve, animations: {
+                UIView.transition(with: window, duration: 0.4, options: .transitionCrossDissolve, animations: {
                     let oldState: Bool = UIView.areAnimationsEnabled
                     UIView.setAnimationsEnabled(false)
                     window.rootViewController = rootViewController
@@ -71,7 +90,7 @@ extension UIApplication {
                 
                 window.rootViewController = rootViewController;
                 
-                UIView.animate(withDuration: 0.5, animations: {() in
+                UIView.animate(withDuration: 0.4, animations: {() in
                     snapshot.layer.opacity = 0;
                     snapshot.layer.transform = CATransform3DMakeScale(1.5, 1.5, 1.5);
                     }, completion: {

@@ -31,4 +31,10 @@ extension UIAlertController {
     public func addCancel(title: String) {
         self.addAction(UIAlertAction(title: title, style: .cancel, handler: nil))
     }
+    
+    public class func showAlert(_ message: String?) {
+        let ac = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        UIApplication.topViewController()?.present(ac, animated: true, completion: nil)
+    }
 }

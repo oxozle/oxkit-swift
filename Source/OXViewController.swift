@@ -27,7 +27,7 @@
 import UIKit
 
 ///Base class for safe use view controllers
-open class OXViewController: UIViewController {    
+open class OXViewController: UIViewController {
     public var notificationManager: OXNotificationManager = OXNotificationManager()
     
     open  class func showController(_ parent: OXViewController, data: [String:Any]? = nil) {
@@ -48,7 +48,7 @@ open class OXViewController: UIViewController {
         return true
     }
     
-  
+    
     
     //MARK: View Life
     deinit {
@@ -82,6 +82,19 @@ open class OXViewController: UIViewController {
         }
         return storyboard.instantiateViewController(withIdentifier: identifier) as! OXViewController
     }
+    
+    // MARK: Keyboard
+    
+    public func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    func dismissKeyboard() {
+        view.endEditing(true)
+    }
+    
 }
 
 

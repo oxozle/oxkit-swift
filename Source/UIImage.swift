@@ -30,7 +30,7 @@ import UIKit
 public extension UIImage {
     
     public convenience init?(diameter: CGFloat, color: UIColor) {
-        UIGraphicsBeginImageContextWithOptions(CGSize(width: diameter, height: diameter), false, 0.0)
+        UIGraphicsBeginImageContextWithOptions(CGSize(width: diameter, height: diameter), false, UIScreen.main.scale)
         let ctx = UIGraphicsGetCurrentContext()!
         ctx.saveGState()
         let rect = CGRect(x: 0, y: 0, width: diameter, height: diameter)

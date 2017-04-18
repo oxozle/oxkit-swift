@@ -27,7 +27,7 @@
 import Foundation
 
 public extension UserDefaults {
-    open func bool(forKey defaultName: String, defaultValue: Bool) -> Bool {
+    public func bool(forKey defaultName: String, defaultValue: Bool) -> Bool {
         if UserDefaults.standard.object(forKey: defaultName) == nil {
             return defaultValue
         }

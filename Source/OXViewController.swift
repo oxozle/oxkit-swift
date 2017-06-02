@@ -92,7 +92,10 @@ open class OXViewController: UIViewController {
     }
     
     func dismissKeyboard() {
-        view.endEditing(true)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
+            self.view.endEditing(true)
+        }
+//        view.endEditing(true)
     }
     
 }

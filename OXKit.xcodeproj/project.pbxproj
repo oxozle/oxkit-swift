@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2C8CD9FB1E15AFD80002EE45 /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8CD9FA1E15AFD80002EE45 /* Localization.swift */; };
+		5657C2941EE1BC1B000E3C74 /* NSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5657C2931EE1BC1B000E3C74 /* NSObject.swift */; };
 		56777AD21E5247AB00E3F108 /* URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56777AD11E5247AB00E3F108 /* URL.swift */; };
 		610D8D261E1559D100A3367F /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610D8D251E1559D100A3367F /* Random.swift */; };
 		61136C2F1E02E4D5005A3AA6 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 61136C2D1E02E4D5005A3AA6 /* Info.plist */; };
@@ -35,6 +36,7 @@
 /* Begin PBXFileReference section */
 		2C8CD9FA1E15AFD80002EE45 /* Localization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Localization.swift; path = Source/Localization.swift; sourceTree = SOURCE_ROOT; };
 		413ACBF5489F0508F3FC0296 /* Pods-OXKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OXKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-OXKit/Pods-OXKit.release.xcconfig"; sourceTree = "<group>"; };
+		5657C2931EE1BC1B000E3C74 /* NSObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NSObject.swift; path = Source/NSObject.swift; sourceTree = SOURCE_ROOT; };
 		56777AD11E5247AB00E3F108 /* URL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = URL.swift; path = Source/URL.swift; sourceTree = SOURCE_ROOT; };
 		610D8D251E1559D100A3367F /* Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Random.swift; path = Source/Random.swift; sourceTree = SOURCE_ROOT; };
 		61136C201E02E04E005A3AA6 /* OXKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OXKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -134,6 +136,7 @@
 				61136CBB1E0433C2005A3AA6 /* UIAlertController.swift */,
 				61B367A11E08338E0043D228 /* CALayer.swift */,
 				56777AD11E5247AB00E3F108 /* URL.swift */,
+				5657C2931EE1BC1B000E3C74 /* NSObject.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				61136C701E03E226005A3AA6 /* OXNavigationBar.swift in Sources */,
+				5657C2941EE1BC1B000E3C74 /* NSObject.swift in Sources */,
 				61136C661E03DF9F005A3AA6 /* UIApplication.swift in Sources */,
 				61136C711E03E226005A3AA6 /* OXNavigationController.swift in Sources */,
 				61B367A21E08338E0043D228 /* CALayer.swift in Sources */,

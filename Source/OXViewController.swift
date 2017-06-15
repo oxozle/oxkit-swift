@@ -92,6 +92,7 @@ open class OXViewController: UIViewController {
     }
     
     func dismissKeyboard() {
+        //To not prevent other tap events
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
             self.view.endEditing(true)
         }

@@ -27,6 +27,25 @@
 import Foundation
 import UIKit
 
+extension Dictionary {
+    public func sortedKeys(isOrderedBefore:(Key,Key) -> Bool) -> [Key] {
+        return Array(self.keys).sorted(by: isOrderedBefore)
+    }
+    
+    public func keysSortedByValue(isOrderedBefore:(Value, Value) -> Bool) -> [Key] {
+        return Array(self)
+            .sorted() {
+                let (_, lv) = $0
+                let (_, rv) = $1
+                return isOrderedBefore(lv, rv)
+            }
+            .map {
+                let (k, _) = $0
+                return k
+        }
+    }
+}
+
 open class OXView: UIView {
     public class func loadFromNib(_ data: Any? = nil) -> OXView {
         let view = UINib(nibName: "\(self)", bundle: Bundle.main).instantiate(withOwner: self, options: nil).first as! OXView
@@ -42,6 +61,22 @@ open class OXView: UIView {
     
     open func setupData(_ data: Any? = nil) {
         
+    }
+}
+
+extension UIView {
+    open func currentFirstResponder() -> UIResponder? {
+        if self.isFirstResponder {
+            return self
+        }
+        
+        for view in self.subviews {
+            if let responder = view.currentFirstResponder() {
+                return responder
+            }
+        }
+        
+        return nil
     }
 }
 

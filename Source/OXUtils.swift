@@ -58,5 +58,21 @@ public final class OXUtils {
     public class var appBuild: String {
         return Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") as! String
     }
-
+    
+    public class func getAdvId() -> String {
+        #if (arch(i386) || arch(x86_64)) && (os(iOS) || os(watchOS) || os(tvOS))
+            return "a15aa882-85df-480c-ac10-3686a57f3232"
+        #else
+            return UIDevice.current.identifierForVendor?.uuidString ?? "N/A"
+        #endif
+    }
 }
+
+extension Data {
+    public func hexString() -> String {
+        return self.reduce("") { string, byte in
+            string + String(format: "%02X", byte)
+        }
+    }
+}
+

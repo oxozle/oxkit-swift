@@ -80,3 +80,7 @@ extension UIView {
     }
 }
 
+
+public var isIphone5: Bool {
+    return UIScreen.main.bounds.height == 568
+}

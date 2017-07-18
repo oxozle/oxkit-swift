@@ -64,6 +64,24 @@ open class OXView: UIView {
     }
 }
 
+open class OXControl: UIControl {
+    public class func loadFromNib(_ data: Any? = nil) -> OXControl {
+        let view = UINib(nibName: "\(self)", bundle: Bundle.main).instantiate(withOwner: self, options: nil).first as! OXControl
+        view.setupData(data)
+        view.configureView()
+        return view
+    }
+    
+    
+    open func configureView() {
+        
+    }
+    
+    open func setupData(_ data: Any? = nil) {
+        
+    }
+}
+
 extension UIView {
     open func currentFirstResponder() -> UIResponder? {
         if self.isFirstResponder {
@@ -83,4 +101,16 @@ extension UIView {
 
 public var isIphone5: Bool {
     return UIScreen.main.bounds.height == 568
+}
+
+public var isIphone4: Bool {
+    return UIScreen.main.bounds.height < 568
+}
+
+public var isScreenMoreOrLike6: Bool {
+    return UIScreen.main.bounds.height >= 667
+}
+
+public var isScreenMoreOrLike5: Bool {
+    return UIScreen.main.bounds.height >= 568
 }

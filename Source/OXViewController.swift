@@ -91,7 +91,7 @@ open class OXViewController: UIViewController {
         view.addGestureRecognizer(tap)
     }
     
-    func dismissKeyboard() {
+    @objc func dismissKeyboard() {
         //To not prevent other tap events
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
             self.view.endEditing(true)

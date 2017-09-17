@@ -68,11 +68,4 @@ public final class OXUtils {
     }
 }
 
-extension Data {
-    public func hexString() -> String {
-        return self.reduce("") { string, byte in
-            string + String(format: "%02X", byte)
-        }
-    }
-}
 

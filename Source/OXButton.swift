@@ -26,17 +26,6 @@
 
 import UIKit
 
-extension UIButton {
-    public func setBorder(cornerRadius: CGFloat, borderColor: UIColor, borderWidth: CGFloat) {
-        self.layer.cornerRadius = cornerRadius
-        if(self.layer.cornerRadius > 0){
-            self.layer.masksToBounds = true
-        }
-        self.layer.borderColor = borderColor.cgColor
-        self.layer.borderWidth = borderWidth
-    }
-}
-
 @IBDesignable
 open class OXButton: OXLocalizableButton {
     

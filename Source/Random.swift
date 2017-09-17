@@ -28,8 +28,3 @@ public func rand(_ range: Range<CGFloat>) -> CGFloat {
     let max = range.upperBound
     return CGFloat(arc4random_uniform(UInt32(max - min))) + min
 }
-
-//// accepts Rand(1 ... 5)
-//public func rand(_ range: ClosedRange<Int>) -> Int {
-//    return Int(range.lowerBound + arc4random_uniform(range.upperBound + 1 - range.lowerBound))
-//}

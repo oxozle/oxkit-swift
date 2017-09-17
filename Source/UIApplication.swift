@@ -41,6 +41,20 @@ public enum ChangeRootViewControllerAnimation {
 
 extension UIApplication {
     
+    public func universalOpenUrl(_ url: URL) {
+        if #available(iOS 10, *) {
+            open(url, options: [:],
+                 completionHandler: {
+                    (success) in
+                    print("Open \(url): \(success)")
+            })
+        } else {
+            let success = openURL(url)
+            print("Open \(url): \(success)")
+        }
+        
+    }
+    
     /// Return the specific topViewController in application
     public class func topViewController(_ viewController: UIViewController? = UIApplication.shared.keyWindow?.rootViewController) -> UIViewController? {
         if let nav = viewController as? UINavigationController {
@@ -56,7 +70,7 @@ extension UIApplication {
         }
         return viewController
     }
-
+    
     
     
     public func switchRootViewController(_ window: UIWindow?, rootViewController: UIViewController, animation: ChangeRootViewControllerAnimation, completion: (() -> Void)?) {
@@ -74,15 +88,15 @@ extension UIApplication {
                 }, completion: { (finished: Bool) -> () in
                     completion?()
                 })
-
+                
             case .transitionCrossDissolve:
                 UIView.transition(with: window, duration: 0.4, options: .transitionCrossDissolve, animations: {
                     let oldState: Bool = UIView.areAnimationsEnabled
                     UIView.setAnimationsEnabled(false)
                     window.rootViewController = rootViewController
                     UIView.setAnimationsEnabled(oldState)
-                    }, completion: { (finished: Bool) -> () in
-                        completion?()
+                }, completion: { (finished: Bool) -> () in
+                    completion?()
                 })
             case .scale:
                 let snapshot: UIView = window.snapshotView(afterScreenUpdates: true)!
@@ -93,10 +107,10 @@ extension UIApplication {
                 UIView.animate(withDuration: 0.4, animations: {() in
                     snapshot.layer.opacity = 0;
                     snapshot.layer.transform = CATransform3DMakeScale(1.5, 1.5, 1.5);
-                    }, completion: {
-                        (value: Bool) in
-                        snapshot.removeFromSuperview();
-                        completion?()
+                }, completion: {
+                    (value: Bool) in
+                    snapshot.removeFromSuperview();
+                    completion?()
                 });
             }
         }

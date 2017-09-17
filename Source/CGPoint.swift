@@ -26,6 +26,13 @@
 
 import Foundation
 
+extension CGPoint {
+    public func distance(to point: CGPoint) -> CGFloat {
+        return hypot(self.x - point.x, self.y - point.y)
+    }
+
+}
+
 
 public func + (left: CGPoint, right: CGPoint) -> CGPoint {
     return CGPoint(x: left.x + right.x, y: left.y + right.y)
@@ -51,14 +58,6 @@ public func *= ( left: inout CGPoint, right: CGPoint) {
     left = left * right
 }
 
-public func * (point: CGPoint, scalar: CGFloat) -> CGPoint {
-    return CGPoint(x: point.x * scalar, y: point.y * scalar)
-}
-
-public func *= ( point: inout CGPoint, scalar: CGFloat) {
-    point = point * scalar
-}
-
 public func / (left: CGPoint, right: CGPoint) -> CGPoint {
     return CGPoint(x: left.x / right.x, y: left.y / right.y)
 }
@@ -73,4 +72,22 @@ public func / (point: CGPoint, scalar: CGFloat) -> CGPoint {
 
 public func /= ( point: inout CGPoint, scalar: CGFloat) {
     point = point / scalar
+}
+
+
+
+public func * (point: CGPoint, scalar: CGFloat) -> CGPoint {
+    return CGPoint(x: point.x * scalar, y: point.y * scalar)
+}
+
+public func *= ( point: inout CGPoint, scalar: CGFloat) {
+    point = point * scalar
+}
+
+public func + (point: CGPoint, scalar: CGFloat) -> CGPoint {
+    return CGPoint(x: point.x + scalar, y: point.y + scalar)
+}
+
+public func += ( point: inout CGPoint, scalar: CGFloat) {
+    point = point + scalar
 }

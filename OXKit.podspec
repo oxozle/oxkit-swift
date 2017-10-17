@@ -8,6 +8,8 @@ Pod::Spec.new do |s|
   s.platform     = :ios, "9.0"
   s.source       = { :git => "https://github.com/oxozle/oxkit-swift.git", :tag => s.version}
   s.source_files = "Sources/**/*.swift"
+  s.resources    = "Sources/**/*.js"
+  s.framework    = "WebKit"
 
   s.ios.deployment_target = '9.0'
 end

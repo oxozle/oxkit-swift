@@ -11,6 +11,8 @@
 		560B23251F962DD700D7B67C /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560B23241F962DD700D7B67C /* UIView.swift */; };
 		560B23271F962E6D00D7B67C /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560B23261F962E6D00D7B67C /* String.swift */; };
 		560B23291F962E7A00D7B67C /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560B23281F962E7A00D7B67C /* Date.swift */; };
+		560B232B1F962EE700D7B67C /* OXWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560B232A1F962EE700D7B67C /* OXWebView.swift */; };
+		560B232F1F962F1900D7B67C /* OXWebView.js in Resources */ = {isa = PBXBuildFile; fileRef = 560B232E1F962F1900D7B67C /* OXWebView.js */; };
 		5657C2941EE1BC1B000E3C74 /* NSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5657C2931EE1BC1B000E3C74 /* NSObject.swift */; };
 		56777AD21E5247AB00E3F108 /* URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56777AD11E5247AB00E3F108 /* URL.swift */; };
 		56EF55E61F601E4D00734C74 /* CGSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EF55E51F601E4D00734C74 /* CGSize.swift */; };
@@ -43,6 +45,8 @@
 		560B23241F962DD700D7B67C /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		560B23261F962E6D00D7B67C /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		560B23281F962E7A00D7B67C /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		560B232A1F962EE700D7B67C /* OXWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OXWebView.swift; sourceTree = "<group>"; };
+		560B232E1F962F1900D7B67C /* OXWebView.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = OXWebView.js; sourceTree = "<group>"; };
 		5657C2931EE1BC1B000E3C74 /* NSObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NSObject.swift; path = Sources/Extensions/NSObject.swift; sourceTree = SOURCE_ROOT; };
 		56777AD11E5247AB00E3F108 /* URL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = URL.swift; path = Sources/Extensions/URL.swift; sourceTree = SOURCE_ROOT; };
 		56EF55E51F601E4D00734C74 /* CGSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CGSize.swift; path = Sources/Extensions/CGSize.swift; sourceTree = SOURCE_ROOT; };
@@ -145,6 +149,8 @@
 				61136C6E1E03E226005A3AA6 /* OXViewController.swift */,
 				61136C7A1E03E81A005A3AA6 /* OXView.swift */,
 				61136C741E03E463005A3AA6 /* OXGradientView.swift */,
+				560B232A1F962EE700D7B67C /* OXWebView.swift */,
+				560B232E1F962F1900D7B67C /* OXWebView.js */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -255,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				61136C2F1E02E4D5005A3AA6 /* Info.plist in Resources */,
+				560B232F1F962F1900D7B67C /* OXWebView.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +276,7 @@
 				5657C2941EE1BC1B000E3C74 /* NSObject.swift in Sources */,
 				61136C661E03DF9F005A3AA6 /* UIApplication.swift in Sources */,
 				61136C711E03E226005A3AA6 /* OXNavigationController.swift in Sources */,
+				560B232B1F962EE700D7B67C /* OXWebView.swift in Sources */,
 				61B367A21E08338E0043D228 /* CALayer.swift in Sources */,
 				61136C3C1E02E514005A3AA6 /* CGRect.swift in Sources */,
 				61136C5C1E02E9A6005A3AA6 /* Notification.swift in Sources */,

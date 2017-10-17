@@ -96,11 +96,6 @@ open class OXViewController: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
             self.view.endEditing(true)
         }
-//        view.endEditing(true)
     }
     
 }
-
-
-
-

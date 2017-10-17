@@ -1,5 +1,5 @@
 //
-//  OXButton.swift
+//  OXUtils.swift
 //  OXKit
 //
 //  The MIT License (MIT)
@@ -24,37 +24,47 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //  SOFTWARE.
 
+import Foundation
 import UIKit
 
-@IBDesignable
-open class OXButton: OXLocalizableButton {
+/// Collection of useful utilities
+public final class OXUtils {
     
-    //MARK: - IB Inspectable
-    @IBInspectable
-    open var cornerRadius: CGFloat  = 0{
-        didSet{
-            self.layer.cornerRadius = cornerRadius
-            if(self.layer.cornerRadius > 0){
-                self.layer.masksToBounds = true
-            }
-            
+    /// Return true if current platform is ipad
+    public class var isIpad: Bool {
+        get {
+            return UIDevice.current.userInterfaceIdiom == .pad
         }
     }
+   
     
-    @IBInspectable
-    open var borderColor: UIColor? = nil{
-        didSet{
-            if borderColor != nil {
-                self.layer.borderColor = borderColor!.cgColor
-            }
-        }
+    /// Return current app version with build 1.0 (25)
+    public class var appVersionAndBuild: String {
+        return "\(OXUtils.appVersion) (\(OXUtils.appBuild))"
     }
     
-    @IBInspectable
-    open var borderWidth: CGFloat = 0{
-        didSet{
-            self.layer.borderWidth = borderWidth
-        }
+    /// Return current version
+    ///
+    /// - Returns: 1.0
+    public class var appVersion: String {
+        let version = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as! String
+        return version
     }
-
+    
+    /// Return current build
+    ///
+    /// - Returns: 25
+    public class var appBuild: String {
+        return Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") as! String
+    }
+    
+    public class func getAdvId() -> String {
+        #if (arch(i386) || arch(x86_64)) && (os(iOS) || os(watchOS) || os(tvOS))
+            return "a15aa882-85df-480c-ac10-3686a57f3232"
+        #else
+            return UIDevice.current.identifierForVendor?.uuidString ?? "N/A"
+        #endif
+    }
 }
+
+

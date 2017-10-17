@@ -1,5 +1,5 @@
 //
-//  OXNSUserDefaults.swift
+//  OXView.swift
 //  OXKit
 //
 //  The MIT License (MIT)
@@ -25,12 +25,42 @@
 //  SOFTWARE.
 
 import Foundation
+import UIKit
 
-public extension UserDefaults {
-    public func bool(forKey defaultName: String, defaultValue: Bool) -> Bool {
-        if UserDefaults.standard.object(forKey: defaultName) == nil {
-            return defaultValue
-        }
-        return UserDefaults.standard.bool(forKey: defaultName)
+open class OXView: UIView {
+    public class func loadFromNib(_ data: Any? = nil) -> OXView {
+        let view = UINib(nibName: "\(self)", bundle: Bundle.main).instantiate(withOwner: self, options: nil).first as! OXView
+        view.setupData(data)
+        view.configureView()
+        return view
+    }
+    
+    
+    open func configureView() {
+        
+    }
+    
+    open func setupData(_ data: Any? = nil) {
+        
     }
 }
+
+open class OXControl: UIControl {
+    public class func loadFromNib(_ data: Any? = nil) -> OXControl {
+        let view = UINib(nibName: "\(self)", bundle: Bundle.main).instantiate(withOwner: self, options: nil).first as! OXControl
+        view.setupData(data)
+        view.configureView()
+        return view
+    }
+    
+    
+    open func configureView() {
+        
+    }
+    
+    open func setupData(_ data: Any? = nil) {
+        
+    }
+}
+
+

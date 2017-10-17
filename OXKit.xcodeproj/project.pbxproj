@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		2C8CD9FB1E15AFD80002EE45 /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8CD9FA1E15AFD80002EE45 /* Localization.swift */; };
+		560B23251F962DD700D7B67C /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560B23241F962DD700D7B67C /* UIView.swift */; };
+		560B23271F962E6D00D7B67C /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560B23261F962E6D00D7B67C /* String.swift */; };
+		560B23291F962E7A00D7B67C /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560B23281F962E7A00D7B67C /* Date.swift */; };
 		5657C2941EE1BC1B000E3C74 /* NSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5657C2931EE1BC1B000E3C74 /* NSObject.swift */; };
 		56777AD21E5247AB00E3F108 /* URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56777AD11E5247AB00E3F108 /* URL.swift */; };
 		56EF55E61F601E4D00734C74 /* CGSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EF55E51F601E4D00734C74 /* CGSize.swift */; };
@@ -23,12 +26,10 @@
 		61136C5C1E02E9A6005A3AA6 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61136C551E02E9A6005A3AA6 /* Notification.swift */; };
 		61136C5E1E02E9A6005A3AA6 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61136C571E02E9A6005A3AA6 /* UserDefaults.swift */; };
 		61136C5F1E02E9A6005A3AA6 /* OXUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61136C581E02E9A6005A3AA6 /* OXUtils.swift */; };
-		61136C631E02EB67005A3AA6 /* OXUrlUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61136C611E02EB67005A3AA6 /* OXUrlUtils.swift */; };
 		61136C661E03DF9F005A3AA6 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61136C651E03DF9F005A3AA6 /* UIApplication.swift */; };
 		61136C701E03E226005A3AA6 /* OXNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61136C6C1E03E226005A3AA6 /* OXNavigationBar.swift */; };
 		61136C711E03E226005A3AA6 /* OXNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61136C6D1E03E226005A3AA6 /* OXNavigationController.swift */; };
 		61136C721E03E226005A3AA6 /* OXViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61136C6E1E03E226005A3AA6 /* OXViewController.swift */; };
-		61136C761E03E463005A3AA6 /* OXButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61136C731E03E463005A3AA6 /* OXButton.swift */; };
 		61136C771E03E463005A3AA6 /* OXGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61136C741E03E463005A3AA6 /* OXGradientView.swift */; };
 		61136C7B1E03E81A005A3AA6 /* OXView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61136C7A1E03E81A005A3AA6 /* OXView.swift */; };
 		61136C7D1E03EA5A005A3AA6 /* CGPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61136C7C1E03EA5A005A3AA6 /* CGPoint.swift */; };
@@ -37,35 +38,36 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2C8CD9FA1E15AFD80002EE45 /* Localization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Localization.swift; path = Source/Localization.swift; sourceTree = SOURCE_ROOT; };
+		2C8CD9FA1E15AFD80002EE45 /* Localization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Localization.swift; path = Sources/Core/Localization.swift; sourceTree = SOURCE_ROOT; };
 		413ACBF5489F0508F3FC0296 /* Pods-OXKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OXKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-OXKit/Pods-OXKit.release.xcconfig"; sourceTree = "<group>"; };
-		5657C2931EE1BC1B000E3C74 /* NSObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NSObject.swift; path = Source/NSObject.swift; sourceTree = SOURCE_ROOT; };
-		56777AD11E5247AB00E3F108 /* URL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = URL.swift; path = Source/URL.swift; sourceTree = SOURCE_ROOT; };
-		56EF55E51F601E4D00734C74 /* CGSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CGSize.swift; path = Source/CGSize.swift; sourceTree = SOURCE_ROOT; };
-		56EF55E71F601E9D00734C74 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Data.swift; path = Source/Data.swift; sourceTree = SOURCE_ROOT; };
-		56EF55E91F601ECE00734C74 /* Dictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Dictionary.swift; path = Source/Dictionary.swift; sourceTree = SOURCE_ROOT; };
-		610D8D251E1559D100A3367F /* Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Random.swift; path = Source/Random.swift; sourceTree = SOURCE_ROOT; };
+		560B23241F962DD700D7B67C /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		560B23261F962E6D00D7B67C /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		560B23281F962E7A00D7B67C /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		5657C2931EE1BC1B000E3C74 /* NSObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NSObject.swift; path = Sources/Extensions/NSObject.swift; sourceTree = SOURCE_ROOT; };
+		56777AD11E5247AB00E3F108 /* URL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = URL.swift; path = Sources/Extensions/URL.swift; sourceTree = SOURCE_ROOT; };
+		56EF55E51F601E4D00734C74 /* CGSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CGSize.swift; path = Sources/Extensions/CGSize.swift; sourceTree = SOURCE_ROOT; };
+		56EF55E71F601E9D00734C74 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Data.swift; path = Sources/Extensions/Data.swift; sourceTree = SOURCE_ROOT; };
+		56EF55E91F601ECE00734C74 /* Dictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Dictionary.swift; path = Sources/Extensions/Dictionary.swift; sourceTree = SOURCE_ROOT; };
+		610D8D251E1559D100A3367F /* Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Random.swift; path = Sources/Core/Random.swift; sourceTree = SOURCE_ROOT; };
 		61136C201E02E04E005A3AA6 /* OXKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OXKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		61136C2D1E02E4D5005A3AA6 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Source/Info.plist; sourceTree = SOURCE_ROOT; };
-		61136C2E1E02E4D5005A3AA6 /* OXKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OXKit.h; path = Source/OXKit.h; sourceTree = SOURCE_ROOT; };
-		61136C341E02E514005A3AA6 /* CGRect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CGRect.swift; path = Source/CGRect.swift; sourceTree = SOURCE_ROOT; };
-		61136C361E02E514005A3AA6 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIColor.swift; path = Source/UIColor.swift; sourceTree = SOURCE_ROOT; };
-		61136C381E02E514005A3AA6 /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIImage.swift; path = Source/UIImage.swift; sourceTree = SOURCE_ROOT; };
-		61136C541E02E9A6005A3AA6 /* OXNotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OXNotificationManager.swift; path = Source/OXNotificationManager.swift; sourceTree = SOURCE_ROOT; };
-		61136C551E02E9A6005A3AA6 /* Notification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Notification.swift; path = Source/Notification.swift; sourceTree = SOURCE_ROOT; };
-		61136C571E02E9A6005A3AA6 /* UserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserDefaults.swift; path = Source/UserDefaults.swift; sourceTree = SOURCE_ROOT; };
-		61136C581E02E9A6005A3AA6 /* OXUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OXUtils.swift; path = Source/OXUtils.swift; sourceTree = SOURCE_ROOT; };
-		61136C611E02EB67005A3AA6 /* OXUrlUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OXUrlUtils.swift; path = Source/OXUrlUtils.swift; sourceTree = SOURCE_ROOT; };
-		61136C651E03DF9F005A3AA6 /* UIApplication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIApplication.swift; path = Source/UIApplication.swift; sourceTree = SOURCE_ROOT; };
-		61136C6C1E03E226005A3AA6 /* OXNavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OXNavigationBar.swift; path = Source/OXNavigationBar.swift; sourceTree = SOURCE_ROOT; };
-		61136C6D1E03E226005A3AA6 /* OXNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OXNavigationController.swift; path = Source/OXNavigationController.swift; sourceTree = SOURCE_ROOT; };
-		61136C6E1E03E226005A3AA6 /* OXViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OXViewController.swift; path = Source/OXViewController.swift; sourceTree = SOURCE_ROOT; };
-		61136C731E03E463005A3AA6 /* OXButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OXButton.swift; path = Source/OXButton.swift; sourceTree = SOURCE_ROOT; };
-		61136C741E03E463005A3AA6 /* OXGradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OXGradientView.swift; path = Source/OXGradientView.swift; sourceTree = SOURCE_ROOT; };
-		61136C7A1E03E81A005A3AA6 /* OXView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OXView.swift; path = Source/OXView.swift; sourceTree = SOURCE_ROOT; };
-		61136C7C1E03EA5A005A3AA6 /* CGPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CGPoint.swift; path = Source/CGPoint.swift; sourceTree = SOURCE_ROOT; };
-		61136CBB1E0433C2005A3AA6 /* UIAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIAlertController.swift; path = Source/UIAlertController.swift; sourceTree = SOURCE_ROOT; };
-		61B367A11E08338E0043D228 /* CALayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CALayer.swift; path = Source/CALayer.swift; sourceTree = SOURCE_ROOT; };
+		61136C2D1E02E4D5005A3AA6 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Sources/Supporting Files/Info.plist"; sourceTree = SOURCE_ROOT; };
+		61136C2E1E02E4D5005A3AA6 /* OXKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OXKit.h; path = "Sources/Supporting Files/OXKit.h"; sourceTree = SOURCE_ROOT; };
+		61136C341E02E514005A3AA6 /* CGRect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CGRect.swift; path = Sources/Extensions/CGRect.swift; sourceTree = SOURCE_ROOT; };
+		61136C361E02E514005A3AA6 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIColor.swift; path = Sources/Extensions/UIColor.swift; sourceTree = SOURCE_ROOT; };
+		61136C381E02E514005A3AA6 /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIImage.swift; path = Sources/Extensions/UIImage.swift; sourceTree = SOURCE_ROOT; };
+		61136C541E02E9A6005A3AA6 /* OXNotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OXNotificationManager.swift; path = Sources/Core/OXNotificationManager.swift; sourceTree = SOURCE_ROOT; };
+		61136C551E02E9A6005A3AA6 /* Notification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Notification.swift; path = Sources/Extensions/Notification.swift; sourceTree = SOURCE_ROOT; };
+		61136C571E02E9A6005A3AA6 /* UserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserDefaults.swift; path = Sources/Extensions/UserDefaults.swift; sourceTree = SOURCE_ROOT; };
+		61136C581E02E9A6005A3AA6 /* OXUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OXUtils.swift; path = Sources/Core/OXUtils.swift; sourceTree = SOURCE_ROOT; };
+		61136C651E03DF9F005A3AA6 /* UIApplication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIApplication.swift; path = Sources/Extensions/UIApplication.swift; sourceTree = SOURCE_ROOT; };
+		61136C6C1E03E226005A3AA6 /* OXNavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OXNavigationBar.swift; path = Sources/UI/OXNavigationBar.swift; sourceTree = SOURCE_ROOT; };
+		61136C6D1E03E226005A3AA6 /* OXNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OXNavigationController.swift; path = Sources/UI/OXNavigationController.swift; sourceTree = SOURCE_ROOT; };
+		61136C6E1E03E226005A3AA6 /* OXViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OXViewController.swift; path = Sources/UI/OXViewController.swift; sourceTree = SOURCE_ROOT; };
+		61136C741E03E463005A3AA6 /* OXGradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OXGradientView.swift; path = Sources/UI/OXGradientView.swift; sourceTree = SOURCE_ROOT; };
+		61136C7A1E03E81A005A3AA6 /* OXView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OXView.swift; path = Sources/UI/OXView.swift; sourceTree = SOURCE_ROOT; };
+		61136C7C1E03EA5A005A3AA6 /* CGPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CGPoint.swift; path = Sources/Extensions/CGPoint.swift; sourceTree = SOURCE_ROOT; };
+		61136CBB1E0433C2005A3AA6 /* UIAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIAlertController.swift; path = Sources/Extensions/UIAlertController.swift; sourceTree = SOURCE_ROOT; };
+		61B367A11E08338E0043D228 /* CALayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CALayer.swift; path = Sources/Extensions/CALayer.swift; sourceTree = SOURCE_ROOT; };
 		E78892732BE85D18705926F4 /* Pods-OXKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OXKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OXKit/Pods-OXKit.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -89,10 +91,77 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		560B231F1F9611D400D7B67C /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				560B23231F962D4700D7B67C /* Supporting Files */,
+				560B23221F962D2B00D7B67C /* UI */,
+				560B23211F962D2000D7B67C /* Extensions */,
+				560B23201F9611DD00D7B67C /* Core */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		560B23201F9611DD00D7B67C /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				61136C541E02E9A6005A3AA6 /* OXNotificationManager.swift */,
+				61136C581E02E9A6005A3AA6 /* OXUtils.swift */,
+				610D8D251E1559D100A3367F /* Random.swift */,
+				2C8CD9FA1E15AFD80002EE45 /* Localization.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		560B23211F962D2000D7B67C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				61B367A11E08338E0043D228 /* CALayer.swift */,
+				61136C7C1E03EA5A005A3AA6 /* CGPoint.swift */,
+				61136C341E02E514005A3AA6 /* CGRect.swift */,
+				56EF55E51F601E4D00734C74 /* CGSize.swift */,
+				56EF55E71F601E9D00734C74 /* Data.swift */,
+				56EF55E91F601ECE00734C74 /* Dictionary.swift */,
+				61136C551E02E9A6005A3AA6 /* Notification.swift */,
+				5657C2931EE1BC1B000E3C74 /* NSObject.swift */,
+				61136CBB1E0433C2005A3AA6 /* UIAlertController.swift */,
+				61136C651E03DF9F005A3AA6 /* UIApplication.swift */,
+				61136C361E02E514005A3AA6 /* UIColor.swift */,
+				61136C381E02E514005A3AA6 /* UIImage.swift */,
+				56777AD11E5247AB00E3F108 /* URL.swift */,
+				61136C571E02E9A6005A3AA6 /* UserDefaults.swift */,
+				560B23241F962DD700D7B67C /* UIView.swift */,
+				560B23261F962E6D00D7B67C /* String.swift */,
+				560B23281F962E7A00D7B67C /* Date.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		560B23221F962D2B00D7B67C /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				61136C6C1E03E226005A3AA6 /* OXNavigationBar.swift */,
+				61136C6D1E03E226005A3AA6 /* OXNavigationController.swift */,
+				61136C6E1E03E226005A3AA6 /* OXViewController.swift */,
+				61136C7A1E03E81A005A3AA6 /* OXView.swift */,
+				61136C741E03E463005A3AA6 /* OXGradientView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		560B23231F962D4700D7B67C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				61136C2D1E02E4D5005A3AA6 /* Info.plist */,
+				61136C2E1E02E4D5005A3AA6 /* OXKit.h */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		61136C161E02E04D005A3AA6 = {
 			isa = PBXGroup;
 			children = (
-				61136C221E02E04E005A3AA6 /* Source */,
+				560B231F1F9611D400D7B67C /* Sources */,
 				61136C211E02E04E005A3AA6 /* Products */,
 				4E641A7E8F68549AD95A1F50 /* Pods */,
 				814766B83DEB40111EFEF1B1 /* Frameworks */,
@@ -105,81 +174,6 @@
 				61136C201E02E04E005A3AA6 /* OXKit.framework */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		61136C221E02E04E005A3AA6 /* Source */ = {
-			isa = PBXGroup;
-			children = (
-				61136C431E02E97D005A3AA6 /* Core */,
-				61136C311E02E501005A3AA6 /* Extensions */,
-				61136C641E03DE7A005A3AA6 /* UI */,
-				61136C791E03E46C005A3AA6 /* UIElements */,
-				61136C2C1E02E4CC005A3AA6 /* Supporting Files */,
-			);
-			name = Source;
-			path = OXKit;
-			sourceTree = "<group>";
-		};
-		61136C2C1E02E4CC005A3AA6 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				61136C2D1E02E4D5005A3AA6 /* Info.plist */,
-				61136C2E1E02E4D5005A3AA6 /* OXKit.h */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		61136C311E02E501005A3AA6 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				61136C651E03DF9F005A3AA6 /* UIApplication.swift */,
-				61136C571E02E9A6005A3AA6 /* UserDefaults.swift */,
-				61136C551E02E9A6005A3AA6 /* Notification.swift */,
-				61136C341E02E514005A3AA6 /* CGRect.swift */,
-				61136C361E02E514005A3AA6 /* UIColor.swift */,
-				61136C381E02E514005A3AA6 /* UIImage.swift */,
-				61136C7C1E03EA5A005A3AA6 /* CGPoint.swift */,
-				61136CBB1E0433C2005A3AA6 /* UIAlertController.swift */,
-				61B367A11E08338E0043D228 /* CALayer.swift */,
-				56777AD11E5247AB00E3F108 /* URL.swift */,
-				5657C2931EE1BC1B000E3C74 /* NSObject.swift */,
-				56EF55E51F601E4D00734C74 /* CGSize.swift */,
-				56EF55E71F601E9D00734C74 /* Data.swift */,
-				56EF55E91F601ECE00734C74 /* Dictionary.swift */,
-			);
-			name = Extensions;
-			sourceTree = "<group>";
-		};
-		61136C431E02E97D005A3AA6 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				61136C541E02E9A6005A3AA6 /* OXNotificationManager.swift */,
-				61136C581E02E9A6005A3AA6 /* OXUtils.swift */,
-				61136C611E02EB67005A3AA6 /* OXUrlUtils.swift */,
-				610D8D251E1559D100A3367F /* Random.swift */,
-				2C8CD9FA1E15AFD80002EE45 /* Localization.swift */,
-			);
-			name = Core;
-			sourceTree = "<group>";
-		};
-		61136C641E03DE7A005A3AA6 /* UI */ = {
-			isa = PBXGroup;
-			children = (
-				61136C6C1E03E226005A3AA6 /* OXNavigationBar.swift */,
-				61136C6D1E03E226005A3AA6 /* OXNavigationController.swift */,
-				61136C6E1E03E226005A3AA6 /* OXViewController.swift */,
-				61136C7A1E03E81A005A3AA6 /* OXView.swift */,
-			);
-			name = UI;
-			sourceTree = "<group>";
-		};
-		61136C791E03E46C005A3AA6 /* UIElements */ = {
-			isa = PBXGroup;
-			children = (
-				61136C731E03E463005A3AA6 /* OXButton.swift */,
-				61136C741E03E463005A3AA6 /* OXGradientView.swift */,
-			);
-			name = UIElements;
 			sourceTree = "<group>";
 		};
 		814766B83DEB40111EFEF1B1 /* Frameworks */ = {
@@ -282,16 +276,17 @@
 				61136C5E1E02E9A6005A3AA6 /* UserDefaults.swift in Sources */,
 				61136C7D1E03EA5A005A3AA6 /* CGPoint.swift in Sources */,
 				61136CBC1E0433C2005A3AA6 /* UIAlertController.swift in Sources */,
+				560B23291F962E7A00D7B67C /* Date.swift in Sources */,
 				61136C7B1E03E81A005A3AA6 /* OXView.swift in Sources */,
 				2C8CD9FB1E15AFD80002EE45 /* Localization.swift in Sources */,
 				61136C5F1E02E9A6005A3AA6 /* OXUtils.swift in Sources */,
 				610D8D261E1559D100A3367F /* Random.swift in Sources */,
 				61136C3E1E02E514005A3AA6 /* UIColor.swift in Sources */,
 				61136C721E03E226005A3AA6 /* OXViewController.swift in Sources */,
-				61136C761E03E463005A3AA6 /* OXButton.swift in Sources */,
+				560B23271F962E6D00D7B67C /* String.swift in Sources */,
 				56EF55E61F601E4D00734C74 /* CGSize.swift in Sources */,
-				61136C631E02EB67005A3AA6 /* OXUrlUtils.swift in Sources */,
 				56777AD21E5247AB00E3F108 /* URL.swift in Sources */,
+				560B23251F962DD700D7B67C /* UIView.swift in Sources */,
 				56EF55EA1F601ECE00734C74 /* Dictionary.swift in Sources */,
 				61136C401E02E514005A3AA6 /* UIImage.swift in Sources */,
 				61136C5B1E02E9A6005A3AA6 /* OXNotificationManager.swift in Sources */,

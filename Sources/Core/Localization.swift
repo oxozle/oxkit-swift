@@ -23,7 +23,7 @@ final class LocalizeTableKeysCache {
         }
         
         if let textRange = key.range(of: ".") {
-            let table = key.substring(to: textRange.lowerBound)
+            let table = String(key[..<textRange.lowerBound])
             dict[key] = table
             return table
         }
@@ -31,44 +31,6 @@ final class LocalizeTableKeysCache {
         return ""
     }
 }
-
-@IBDesignable
-open class OXLocalizableLabel: UILabel {
-    
-    @IBInspectable
-    public var localizationKey: String?
-    
-    open override func awakeFromNib() {
-        super.awakeFromNib()
-
-        if let text = localizationKey {
-            self.text = text.localized()
-        }
-    }
-}
-
-extension UIButton {
-    public func setLocalizableTitle(key: String) {
-        setTitle(key.localized(), for: .normal)
-    }
-}
-
-@IBDesignable
-open class OXLocalizableButton: UIButton {
-    
-    @IBInspectable
-    public var localizationKey: String?
-    
-    open override func awakeFromNib() {
-        super.awakeFromNib()
-        
-        if let text = localizationKey {
-            setTitle(text.localized(), for: .normal)
-        }
-    }
-}
-
-
 
 public extension String {
     

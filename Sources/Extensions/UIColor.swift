@@ -28,7 +28,6 @@ import UIKit
 
 extension UIColor {
     
-    
     /// Return new brighter color with brightness modification in HSB color space
     ///
     /// - Parameter brightMultiplier: 1.4 is good =)
@@ -65,8 +64,7 @@ extension UIColor {
             hexValue = hex.replacingOccurrences(of: "#", with: "")
         }
         
-        
-        if hexValue.characters.count == 6 {
+        if hexValue.count == 6 {
             let scanner = Scanner(string: hexValue)
             var hexNumber: UInt64 = 0
             
@@ -79,7 +77,7 @@ extension UIColor {
                 self.init(red: r, green: g, blue: b, alpha: a)
                 return
             }
-        } else if hexValue.characters.count == 8 {
+        } else if hexValue.count == 8 {
             let scanner = Scanner(string: hexValue)
             var hexNumber: UInt64 = 0
             
@@ -93,7 +91,6 @@ extension UIColor {
                 return
             }
         }
-        
         
         return nil
     }

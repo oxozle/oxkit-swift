@@ -1,5 +1,5 @@
 //
-//  UIAlertController.swift
+//  OXNSUserDefaults.swift
 //  OXKit
 //
 //  The MIT License (MIT)
@@ -25,16 +25,36 @@
 //  SOFTWARE.
 
 import Foundation
-import UIKit
 
-extension UIAlertController {
-    public func addCancel(title: String) {
-        self.addAction(UIAlertAction(title: title, style: .cancel, handler: nil))
+public extension UserDefaults {
+    public func bool(forKey defaultName: String, defaultValue: Bool) -> Bool {
+        if UserDefaults.standard.object(forKey: defaultName) == nil {
+            return defaultValue
+        }
+        return UserDefaults.standard.bool(forKey: defaultName)
     }
     
-    public class func showAlert(_ message: String?) {
-        let ac = UIAlertController(title: nil, message: message, preferredStyle: .alert)
-        ac.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        UIApplication.topViewController()?.present(ac, animated: true, completion: nil)
+    public func saveJson<T: Encodable>(object: T, for key: String) {
+        let encoder = JSONEncoder()
+        do {
+            let data = try encoder.encode(object)
+            UserDefaults.standard.set(data, forKey: key)
+            UserDefaults.standard.synchronize()
+        } catch {
+            print(error)
+        }
+    }
+    
+    public func loadJson<T: Decodable>(_ type: T.Type, key: String) -> T? {
+        if let data = UserDefaults.standard.data(forKey: key) {
+            let decoder = JSONDecoder()
+            do {
+                let user = try decoder.decode(type, from: data)
+                return user
+            } catch {
+                
+            }
+        }
+        return nil
     }
 }

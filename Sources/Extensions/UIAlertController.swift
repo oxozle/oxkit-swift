@@ -1,5 +1,5 @@
 //
-//  OXUtils.swift
+//  UIAlertController.swift
 //  OXKit
 //
 //  The MIT License (MIT)
@@ -24,48 +24,16 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //  SOFTWARE.
 
-import Foundation
 import UIKit
 
-
-/// Collection of useful utilities
-public final class OXUtils {
-    
-    /// Return true if current platform is ipad
-    public class var isIpad: Bool {
-        get {
-            return UIDevice.current.userInterfaceIdiom == .pad
-        }
-    }
-   
-    
-    /// Return current app version with build 1.0 (25)
-    public class var appVersionAndBuild: String {
-        return "\(OXUtils.appVersion) (\(OXUtils.appBuild))"
+extension UIAlertController {
+    public func addCancel(title: String) {
+        self.addAction(UIAlertAction(title: title, style: .cancel, handler: nil))
     }
     
-    /// Return current version
-    ///
-    /// - Returns: 1.0
-    public class var appVersion: String {
-        let version = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as! String
-        return version
-    }
-    
-    /// Return current build
-    ///
-    /// - Returns: 25
-    public class var appBuild: String {
-        return Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") as! String
-    }
-    
-    public class func getAdvId() -> String {
-        #if (arch(i386) || arch(x86_64)) && (os(iOS) || os(watchOS) || os(tvOS))
-            return "a15aa882-85df-480c-ac10-3686a57f3232"
-        #else
-            return UIDevice.current.identifierForVendor?.uuidString ?? "N/A"
-        #endif
+    public class func showAlert(_ message: String?) {
+        let ac = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        UIApplication.topViewController()?.present(ac, animated: true, completion: nil)
     }
 }
-
-

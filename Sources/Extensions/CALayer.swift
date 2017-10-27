@@ -61,6 +61,12 @@ extension CALayer {
         return self
     }
     
+    @discardableResult
+    public func scale(x: CGFloat, y: CGFloat) -> CALayer {
+        self.transform = CATransform3DScale(self.transform, y, x, 1)
+        return self
+    }
+    
     /// Rotate layer
     ///
     /// - Parameters:

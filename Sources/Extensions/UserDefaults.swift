@@ -42,25 +42,25 @@ public extension UserDefaults {
     }
     
     public func bool(forKey defaultName: String, defaultValue: Bool) -> Bool {
-        if UserDefaults.standard.object(forKey: defaultName) == nil {
+        if object(forKey: defaultName) == nil {
             return defaultValue
         }
-        return UserDefaults.standard.bool(forKey: defaultName)
+        return bool(forKey: defaultName)
     }
     
     public func saveJson<T: Encodable>(object: T, for key: String) {
         let encoder = JSONEncoder()
         do {
             let data = try encoder.encode(object)
-            UserDefaults.standard.set(data, forKey: key)
-            UserDefaults.standard.synchronize()
+            set(data, forKey: key)
+            synchronize()
         } catch {
             print(error)
         }
     }
     
     public func loadJson<T: Decodable>(_ type: T.Type, key: String) -> T? {
-        if let data = UserDefaults.standard.data(forKey: key) {
+        if let data = data(forKey: key) {
             let decoder = JSONDecoder()
             do {
                 let user = try decoder.decode(type, from: data)

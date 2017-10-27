@@ -28,6 +28,12 @@ import Foundation
 
 extension CGRect {
     
+    public var center: CGPoint {
+        get{
+            return CGPoint(x: self.origin.x + self.width / 2, y: self.origin.y + self.height / 2)
+        }
+    }
+    
     /// Return X origin position
     public var x: CGFloat {
         get {

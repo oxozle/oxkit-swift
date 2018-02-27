@@ -27,6 +27,13 @@ extension Dictionary {
         }
     }
     
+    public init(elements:[(Key, Value)]) {
+        self.init()
+        for (key, value) in elements {
+            updateValue(value, forKey: key)
+        }
+    }
+    
     
     /// Build string representation of HTTP parameter dictionary of keys and objects
     ///

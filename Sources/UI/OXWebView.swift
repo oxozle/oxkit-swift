@@ -64,7 +64,7 @@ public class OXWebView: WKWebView {
     
     public func load(url: String) {
         if let startUrl = URL(string: url) {
-            var request = URLRequest(url: startUrl)
+            let request = URLRequest(url: startUrl)
             load(request)
         }
     }

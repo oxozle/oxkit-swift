@@ -59,3 +59,18 @@ public var isScreenMoreOrLike6: Bool {
 public var isScreenMoreOrLike5: Bool {
     return UIScreen.main.bounds.height >= 568
 }
+
+
+public protocol Reusable: class {
+    static var reuseIdentifier: String { get }
+}
+
+public extension Reusable {
+    public static var reuseIdentifier: String { return String(describing: self) }
+}
+
+extension UICollectionViewCell: Reusable {    
+}
+
+extension UICollectionReusableView: Reusable {
+}

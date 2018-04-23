@@ -36,6 +36,16 @@ public extension String {
     
     /// Localizae string
     public func localized() -> String {
+//        let selectedLanguage = QRKit.application.language
+//        if let path = Bundle.main.path(forResource: selectedLanguage, ofType: "lproj"),
+//            let bundle = Bundle(path: path) {
+//            return NSLocalizedString(self,
+//                                     tableName: LocalizeTableKeysCache.i.getTable(self),
+//                                     bundle: bundle,
+//                                     value: self,
+//                                     comment: self)
+//        }
+//        return self
         return NSLocalizedString(self,
                                  tableName: LocalizeTableKeysCache.i.getTable(self),
                                  bundle: Bundle.main,

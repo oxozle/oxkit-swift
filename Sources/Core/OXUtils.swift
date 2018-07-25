@@ -36,6 +36,18 @@ public final class OXUtils {
             return UIDevice.current.userInterfaceIdiom == .pad
         }
     }
+    
+    public class var isiPhone5: Bool {
+        get {
+            return UIScreen.main.nativeBounds.height == 1136
+        }
+    }
+    
+    public class var isiPhone5AndLower: Bool {
+        get {
+            return UIScreen.main.nativeBounds.height <= 1136
+        }
+    }
    
     
     /// Return current app version with build 1.0 (25)
